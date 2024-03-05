@@ -1,0 +1,2 @@
+class Duong < ApplicationRecord
+end

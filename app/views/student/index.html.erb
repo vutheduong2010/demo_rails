@@ -1,0 +1,11 @@
+<h1>Students</h1>
+<u1>
+  <% @student.each do |student| %>
+    <li><%= "Student code: #{student.student_code},
+             Student name: #{student.student_name},
+             Date of birth: #{student.date_of_birth},
+             Address: #{student.address},
+             Gmail: #{student.gmail},
+             Phone; #{student.phone}"  %></li>
+  <% end %>
+</u1>

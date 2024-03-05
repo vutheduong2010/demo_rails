@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd35d412-ca2a-490d-b3ae-295760d95ae5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/connect_rails/app/models/student.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connect_rails/app/models/teacher.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connect_rails/app/models/transcript.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connect_rails/app/models/tuition.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connect_rails/app/views/classs/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connect_rails/app/views/duong/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connect_rails/app/views/student/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connect_rails/app/views/teacher/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connect_rails/app/views/transcript/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connect_rails/app/views/tuition/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connect_rails/app/views/users/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,22 +36,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Rails.demo_rails.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/duongvuthe/Workspace/demo_rails&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Rails.demo_rails.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "feature",
+    "last_opened_file_path": "/home/duongvuthe/Workspace/demo_rails",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ruby.structure.view.model.defaults.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Rails.demo_rails">
     <configuration name="demo_rails" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="demo_rails" />
@@ -154,7 +144,7 @@
       <workItem from="1709523713444" duration="16060000" />
       <workItem from="1709601671285" duration="20006000" />
       <workItem from="1709627260058" duration="1282000" />
-      <workItem from="1709628547878" duration="2565000" />
+      <workItem from="1709628547878" duration="3171000" />
     </task>
     <servers />
   </component>

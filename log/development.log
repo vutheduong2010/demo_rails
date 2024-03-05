@@ -1,0 +1,1999 @@
+Started GET "/" for 127.0.0.1 at 2024-03-04 14:04:32 +0700
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: demo.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+  
+activerecord (7.1.3.2) lib/active_record/connection_adapters/mysql2_adapter.rb:42:in `rescue in new_client'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/mysql2_adapter.rb:35:in `new_client'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/mysql2_adapter.rb:159:in `connect'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/mysql2_adapter.rb:167:in `reconnect'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3.2) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3.2) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:1100:in `any_raw_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/mysql2_adapter.rb:181:in `get_full_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:87:in `get_database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:657:in `check_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3.2) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3.2) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3.2) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.2) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.2) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9.1) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9.1) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[35m (14.2ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (15.8ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2024-03-04 07:41:39.526330', '2024-03-04 07:41:39.526331')[0m
+Migrating to CreateClasses (20240304071004)
+  [1m[35m (13.4ms)[0m  [1m[35mCREATE TABLE `classes` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `class_code` varchar(255), `class_name` varchar(255), `school_year` varchar(255), `student_list` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240304071004')[0m
+Migrating to CreateCourses (20240304072803)
+  [1m[35m (18.1ms)[0m  [1m[35mCREATE TABLE `courses` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `course_code` varchar(255), `course_name` varchar(255), `teacher` varchar(255), `list_of_registered_student` int, `number_of_credits` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240304072803')[0m
+Migrating to CreateLibraries (20240304072906)
+  [1m[35m (18.6ms)[0m  [1m[35mCREATE TABLE `libraries` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `student_code` varchar(255), `full_name` varchar(255), `gmail` varchar(255), `phone` int, `number_of_books` int, `date_borrow` date, `date_pay` date, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240304072906')[0m
+Migrating to CreateMajors (20240304073247)
+  [1m[35m (16.9ms)[0m  [1m[35mCREATE TABLE `majors` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `majors_code` varchar(255), `majors_name` varchar(255), `list_of_teacher` int, `list_of_student` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240304073247')[0m
+Migrating to CreateNotifitcations (20240304073420)
+  [1m[35m (16.7ms)[0m  [1m[35mCREATE TABLE `notifitcations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `student_code` varchar(255), `student_name` varchar(255), `date_of_birth` date, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240304073420')[0m
+Migrating to Course (20240304073844)
+  [1m[36mActiveRecord::SchemaMigration Create (2.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240304073844')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (55.2ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (15.7ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2024-03-04 08:26:43.904560', '2024-03-04 08:26:43.904564')[0m
+Migrating to CreateClasses (20240304071004)
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE `classes` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `class_code` varchar(255), `class_name` varchar(255), `school_year` varchar(255), `student_list` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE `quanlysinhvien` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE DATABASE `your_app_name_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateClasses (20240304071004)
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE `classes` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `class_code` varchar(255), `class_name` varchar(255), `school_year` varchar(255), `student_list` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateClasses (20240304071004)
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE `classes` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `class_code` varchar(255), `class_name` varchar(255), `school_year` varchar(255), `student_list` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateClasses (20240304071004)
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE `classes` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `class_code` varchar(255), `class_name` varchar(255), `school_year` varchar(255), `student_list` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[35m (17.6ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (13.1ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.7ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2024-03-04 08:33:43.384880', '2024-03-04 08:33:43.384886')[0m
+Migrating to CreateClasses (20240304071004)
+  [1m[35m (17.2ms)[0m  [1m[35mCREATE TABLE `classes` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `class_code` varchar(255), `class_name` varchar(255), `school_year` varchar(255), `student_list` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240304071004')[0m
+Migrating to CreateCourses (20240304072803)
+  [1m[35m (16.0ms)[0m  [1m[35mCREATE TABLE `courses` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `course_code` varchar(255), `course_name` varchar(255), `teacher` varchar(255), `list_of_registered_student` int, `number_of_credits` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240304072803')[0m
+Migrating to CreateLibraries (20240304072906)
+  [1m[35m (18.3ms)[0m  [1m[35mCREATE TABLE `libraries` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `student_code` varchar(255), `full_name` varchar(255), `gmail` varchar(255), `phone` int, `number_of_books` int, `date_borrow` date, `date_pay` date, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240304072906')[0m
+Migrating to CreateMajors (20240304073247)
+  [1m[35m (17.2ms)[0m  [1m[35mCREATE TABLE `majors` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `majors_code` varchar(255), `majors_name` varchar(255), `list_of_teacher` int, `list_of_student` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240304073247')[0m
+Migrating to CreateNotifitcations (20240304073420)
+  [1m[35m (22.3ms)[0m  [1m[35mCREATE TABLE `notifitcations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `student_code` varchar(255), `student_name` varchar(255), `date_of_birth` date, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240304073420')[0m
+Migrating to CreateStudents (20240304074630)
+  [1m[35m (20.6ms)[0m  [1m[35mCREATE TABLE `students` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `student_code` varchar(255), `student_name` varchar(255), `date_of_birth` date, `address` varchar(255), `gmail` varchar(255), `phone` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240304074630')[0m
+Migrating to CreateTeachers (20240304081534)
+  [1m[35m (17.4ms)[0m  [1m[35mCREATE TABLE `teachers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `teacher_code` varchar(255), `teacher_name` varchar(255), `date_of_birth` date, `gender` varchar(255), `gmail` varchar(255), `phone` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240304081534')[0m
+Migrating to CreateTranscripts (20240304081731)
+  [1m[35m (16.4ms)[0m  [1m[35mCREATE TABLE `transcripts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `student_code` varchar(255), `student_name` varchar(255), `date_of_birth` date, `gender` varchar(255), `majors_code` varchar(255), `scores` float(24), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240304081731')[0m
+Migrating to CreateTuition (20240304082452)
+  [1m[35m (20.9ms)[0m  [1m[35mCREATE TABLE `tuitions` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `student_code` varchar(255), `student_name` varchar(255), `phone` int, `gmail` varchar(255), `amount_in_number` float(24), `amount_in_text` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240304082452')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateProducts (20240304092345)
+  [1m[35m (55.9ms)[0m  [1m[35mCREATE TABLE `products` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `price` float(24), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240304092345')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (0.7ms)[0m  [1m[32mINSERT INTO `teachers` (`teacher_code`, `teacher_name`, `date_of_birth`, `gender`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_1', 'Name: 1', '2024-03-04', 'Nam', 'email_1@gmail.com', 123445555, '2024-03-04 10:23:50.775495', '2024-03-04 10:23:50.775495')[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (0.6ms)[0m  [1m[32mINSERT INTO `teachers` (`teacher_code`, `teacher_name`, `date_of_birth`, `gender`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_2', 'Name: 2', '2024-03-04', 'Nam', 'email_2@gmail.com', 123445555, '2024-03-04 10:23:50.779802', '2024-03-04 10:23:50.779802')[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (0.7ms)[0m  [1m[32mINSERT INTO `teachers` (`teacher_code`, `teacher_name`, `date_of_birth`, `gender`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_3', 'Name: 3', '2024-03-04', 'Nam', 'email_3@gmail.com', 123445555, '2024-03-04 10:23:50.783764', '2024-03-04 10:23:50.783764')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (1.0ms)[0m  [1m[32mINSERT INTO `teachers` (`teacher_code`, `teacher_name`, `date_of_birth`, `gender`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_4', 'Name: 4', '2024-03-04', 'Nam', 'email_4@gmail.com', 123445555, '2024-03-04 10:23:50.788123', '2024-03-04 10:23:50.788123')[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (0.9ms)[0m  [1m[32mINSERT INTO `teachers` (`teacher_code`, `teacher_name`, `date_of_birth`, `gender`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_5', 'Name: 5', '2024-03-04', 'Nam', 'email_5@gmail.com', 123445555, '2024-03-04 10:23:50.792878', '2024-03-04 10:23:50.792878')[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (0.9ms)[0m  [1m[32mINSERT INTO `teachers` (`teacher_code`, `teacher_name`, `date_of_birth`, `gender`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_6', 'Name: 6', '2024-03-04', 'Nam', 'email_6@gmail.com', 123445555, '2024-03-04 10:23:50.797863', '2024-03-04 10:23:50.797863')[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (0.8ms)[0m  [1m[32mINSERT INTO `teachers` (`teacher_code`, `teacher_name`, `date_of_birth`, `gender`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_7', 'Name: 7', '2024-03-04', 'Nam', 'email_7@gmail.com', 123445555, '2024-03-04 10:23:50.802360', '2024-03-04 10:23:50.802360')[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (0.7ms)[0m  [1m[32mINSERT INTO `teachers` (`teacher_code`, `teacher_name`, `date_of_birth`, `gender`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_8', 'Name: 8', '2024-03-04', 'Nam', 'email_8@gmail.com', 123445555, '2024-03-04 10:23:50.806606', '2024-03-04 10:23:50.806606')[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (0.7ms)[0m  [1m[32mINSERT INTO `teachers` (`teacher_code`, `teacher_name`, `date_of_birth`, `gender`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_9', 'Name: 9', '2024-03-04', 'Nam', 'email_9@gmail.com', 123445555, '2024-03-04 10:23:50.810373', '2024-03-04 10:23:50.810373')[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (0.7ms)[0m  [1m[32mINSERT INTO `teachers` (`teacher_code`, `teacher_name`, `date_of_birth`, `gender`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_10', 'Name: 10', '2024-03-04', 'Nam', 'email_10@gmail.com', 123445555, '2024-03-04 10:23:50.813881', '2024-03-04 10:23:50.813881')[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (0.6ms)[0m  [1m[32mINSERT INTO `teachers` (`teacher_code`, `teacher_name`, `date_of_birth`, `gender`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_11', 'Name: 11', '2024-03-04', 'Nam', 'email_11@gmail.com', 123445555, '2024-03-04 10:23:50.817601', '2024-03-04 10:23:50.817601')[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (0.6ms)[0m  [1m[32mINSERT INTO `teachers` (`teacher_code`, `teacher_name`, `date_of_birth`, `gender`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_12', 'Name: 12', '2024-03-04', 'Nam', 'email_12@gmail.com', 123445555, '2024-03-04 10:23:50.820898', '2024-03-04 10:23:50.820898')[0m
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (0.6ms)[0m  [1m[32mINSERT INTO `teachers` (`teacher_code`, `teacher_name`, `date_of_birth`, `gender`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_13', 'Name: 13', '2024-03-04', 'Nam', 'email_13@gmail.com', 123445555, '2024-03-04 10:23:50.825151', '2024-03-04 10:23:50.825151')[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (0.6ms)[0m  [1m[32mINSERT INTO `teachers` (`teacher_code`, `teacher_name`, `date_of_birth`, `gender`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_14', 'Name: 14', '2024-03-04', 'Nam', 'email_14@gmail.com', 123445555, '2024-03-04 10:23:50.828994', '2024-03-04 10:23:50.828994')[0m
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (0.7ms)[0m  [1m[32mINSERT INTO `teachers` (`teacher_code`, `teacher_name`, `date_of_birth`, `gender`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_15', 'Name: 15', '2024-03-04', 'Nam', 'email_15@gmail.com', 123445555, '2024-03-04 10:23:50.833762', '2024-03-04 10:23:50.833762')[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (0.6ms)[0m  [1m[32mINSERT INTO `teachers` (`teacher_code`, `teacher_name`, `date_of_birth`, `gender`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_16', 'Name: 16', '2024-03-04', 'Nam', 'email_16@gmail.com', 123445555, '2024-03-04 10:23:50.837331', '2024-03-04 10:23:50.837331')[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (0.6ms)[0m  [1m[32mINSERT INTO `teachers` (`teacher_code`, `teacher_name`, `date_of_birth`, `gender`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_17', 'Name: 17', '2024-03-04', 'Nam', 'email_17@gmail.com', 123445555, '2024-03-04 10:23:50.840915', '2024-03-04 10:23:50.840915')[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (0.6ms)[0m  [1m[32mINSERT INTO `teachers` (`teacher_code`, `teacher_name`, `date_of_birth`, `gender`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_18', 'Name: 18', '2024-03-04', 'Nam', 'email_18@gmail.com', 123445555, '2024-03-04 10:23:50.844979', '2024-03-04 10:23:50.844979')[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (0.6ms)[0m  [1m[32mINSERT INTO `teachers` (`teacher_code`, `teacher_name`, `date_of_birth`, `gender`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_19', 'Name: 19', '2024-03-04', 'Nam', 'email_19@gmail.com', 123445555, '2024-03-04 10:23:50.848895', '2024-03-04 10:23:50.848895')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (0.6ms)[0m  [1m[32mINSERT INTO `teachers` (`teacher_code`, `teacher_name`, `date_of_birth`, `gender`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_20', 'Name: 20', '2024-03-04', 'Nam', 'email_20@gmail.com', 123445555, '2024-03-04 10:23:50.852788', '2024-03-04 10:23:50.852788')[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTranscript Create (0.7ms)[0m  [1m[32mINSERT INTO `transcripts` (`student_code`, `student_name`, `date_of_birth`, `gender`, `majors_code`, `scores`, `created_at`, `updated_at`) VALUES ('CODE_1', 'Name: 1', '2024-03-04', 'Nam', 'Majors_1', 8.0, '2024-03-04 10:49:33.714194', '2024-03-04 10:49:33.714194')[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTranscript Create (0.5ms)[0m  [1m[32mINSERT INTO `transcripts` (`student_code`, `student_name`, `date_of_birth`, `gender`, `majors_code`, `scores`, `created_at`, `updated_at`) VALUES ('CODE_2', 'Name: 2', '2024-03-04', 'Nam', 'Majors_2', 8.0, '2024-03-04 10:49:33.718671', '2024-03-04 10:49:33.718671')[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTranscript Create (0.5ms)[0m  [1m[32mINSERT INTO `transcripts` (`student_code`, `student_name`, `date_of_birth`, `gender`, `majors_code`, `scores`, `created_at`, `updated_at`) VALUES ('CODE_3', 'Name: 3', '2024-03-04', 'Nam', 'Majors_3', 8.0, '2024-03-04 10:49:33.722524', '2024-03-04 10:49:33.722524')[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTranscript Create (0.8ms)[0m  [1m[32mINSERT INTO `transcripts` (`student_code`, `student_name`, `date_of_birth`, `gender`, `majors_code`, `scores`, `created_at`, `updated_at`) VALUES ('CODE_4', 'Name: 4', '2024-03-04', 'Nam', 'Majors_4', 8.0, '2024-03-04 10:49:33.726136', '2024-03-04 10:49:33.726136')[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTranscript Create (0.9ms)[0m  [1m[32mINSERT INTO `transcripts` (`student_code`, `student_name`, `date_of_birth`, `gender`, `majors_code`, `scores`, `created_at`, `updated_at`) VALUES ('CODE_5', 'Name: 5', '2024-03-04', 'Nam', 'Majors_5', 8.0, '2024-03-04 10:49:33.730293', '2024-03-04 10:49:33.730293')[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTranscript Create (1.2ms)[0m  [1m[32mINSERT INTO `transcripts` (`student_code`, `student_name`, `date_of_birth`, `gender`, `majors_code`, `scores`, `created_at`, `updated_at`) VALUES ('CODE_6', 'Name: 6', '2024-03-04', 'Nam', 'Majors_6', 8.0, '2024-03-04 10:49:33.735279', '2024-03-04 10:49:33.735279')[0m
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTranscript Create (1.4ms)[0m  [1m[32mINSERT INTO `transcripts` (`student_code`, `student_name`, `date_of_birth`, `gender`, `majors_code`, `scores`, `created_at`, `updated_at`) VALUES ('CODE_7', 'Name: 7', '2024-03-04', 'Nam', 'Majors_7', 8.0, '2024-03-04 10:49:33.742599', '2024-03-04 10:49:33.742599')[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTranscript Create (1.2ms)[0m  [1m[32mINSERT INTO `transcripts` (`student_code`, `student_name`, `date_of_birth`, `gender`, `majors_code`, `scores`, `created_at`, `updated_at`) VALUES ('CODE_8', 'Name: 8', '2024-03-04', 'Nam', 'Majors_8', 8.0, '2024-03-04 10:49:33.749093', '2024-03-04 10:49:33.749093')[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTranscript Create (1.0ms)[0m  [1m[32mINSERT INTO `transcripts` (`student_code`, `student_name`, `date_of_birth`, `gender`, `majors_code`, `scores`, `created_at`, `updated_at`) VALUES ('CODE_9', 'Name: 9', '2024-03-04', 'Nam', 'Majors_9', 8.0, '2024-03-04 10:49:33.754616', '2024-03-04 10:49:33.754616')[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTranscript Create (0.8ms)[0m  [1m[32mINSERT INTO `transcripts` (`student_code`, `student_name`, `date_of_birth`, `gender`, `majors_code`, `scores`, `created_at`, `updated_at`) VALUES ('CODE_10', 'Name: 10', '2024-03-04', 'Nam', 'Majors_10', 8.0, '2024-03-04 10:49:33.759086', '2024-03-04 10:49:33.759086')[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTranscript Create (0.7ms)[0m  [1m[32mINSERT INTO `transcripts` (`student_code`, `student_name`, `date_of_birth`, `gender`, `majors_code`, `scores`, `created_at`, `updated_at`) VALUES ('CODE_11', 'Name: 11', '2024-03-04', 'Nam', 'Majors_11', 8.0, '2024-03-04 10:49:33.763012', '2024-03-04 10:49:33.763012')[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTranscript Create (0.7ms)[0m  [1m[32mINSERT INTO `transcripts` (`student_code`, `student_name`, `date_of_birth`, `gender`, `majors_code`, `scores`, `created_at`, `updated_at`) VALUES ('CODE_12', 'Name: 12', '2024-03-04', 'Nam', 'Majors_12', 8.0, '2024-03-04 10:49:33.766611', '2024-03-04 10:49:33.766611')[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTranscript Create (0.7ms)[0m  [1m[32mINSERT INTO `transcripts` (`student_code`, `student_name`, `date_of_birth`, `gender`, `majors_code`, `scores`, `created_at`, `updated_at`) VALUES ('CODE_13', 'Name: 13', '2024-03-04', 'Nam', 'Majors_13', 8.0, '2024-03-04 10:49:33.770349', '2024-03-04 10:49:33.770349')[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTranscript Create (0.6ms)[0m  [1m[32mINSERT INTO `transcripts` (`student_code`, `student_name`, `date_of_birth`, `gender`, `majors_code`, `scores`, `created_at`, `updated_at`) VALUES ('CODE_14', 'Name: 14', '2024-03-04', 'Nam', 'Majors_14', 8.0, '2024-03-04 10:49:33.773928', '2024-03-04 10:49:33.773928')[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTranscript Create (0.6ms)[0m  [1m[32mINSERT INTO `transcripts` (`student_code`, `student_name`, `date_of_birth`, `gender`, `majors_code`, `scores`, `created_at`, `updated_at`) VALUES ('CODE_15', 'Name: 15', '2024-03-04', 'Nam', 'Majors_15', 8.0, '2024-03-04 10:49:33.777402', '2024-03-04 10:49:33.777402')[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTranscript Create (0.6ms)[0m  [1m[32mINSERT INTO `transcripts` (`student_code`, `student_name`, `date_of_birth`, `gender`, `majors_code`, `scores`, `created_at`, `updated_at`) VALUES ('CODE_16', 'Name: 16', '2024-03-04', 'Nam', 'Majors_16', 8.0, '2024-03-04 10:49:33.780880', '2024-03-04 10:49:33.780880')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTranscript Create (0.6ms)[0m  [1m[32mINSERT INTO `transcripts` (`student_code`, `student_name`, `date_of_birth`, `gender`, `majors_code`, `scores`, `created_at`, `updated_at`) VALUES ('CODE_17', 'Name: 17', '2024-03-04', 'Nam', 'Majors_17', 8.0, '2024-03-04 10:49:33.784699', '2024-03-04 10:49:33.784699')[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTranscript Create (0.6ms)[0m  [1m[32mINSERT INTO `transcripts` (`student_code`, `student_name`, `date_of_birth`, `gender`, `majors_code`, `scores`, `created_at`, `updated_at`) VALUES ('CODE_18', 'Name: 18', '2024-03-04', 'Nam', 'Majors_18', 8.0, '2024-03-04 10:49:33.788461', '2024-03-04 10:49:33.788461')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTranscript Create (0.6ms)[0m  [1m[32mINSERT INTO `transcripts` (`student_code`, `student_name`, `date_of_birth`, `gender`, `majors_code`, `scores`, `created_at`, `updated_at`) VALUES ('CODE_19', 'Name: 19', '2024-03-04', 'Nam', 'Majors_19', 8.0, '2024-03-04 10:49:33.792196', '2024-03-04 10:49:33.792196')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTranscript Create (0.6ms)[0m  [1m[32mINSERT INTO `transcripts` (`student_code`, `student_name`, `date_of_birth`, `gender`, `majors_code`, `scores`, `created_at`, `updated_at`) VALUES ('CODE_20', 'Name: 20', '2024-03-04', 'Nam', 'Majors_20', 8.0, '2024-03-04 10:49:33.795877', '2024-03-04 10:49:33.795877')[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTuition Create (0.8ms)[0m  [1m[32mINSERT INTO `tuitions` (`student_code`, `student_name`, `phone`, `gmail`, `amount_in_number`, `amount_in_text`, `created_at`, `updated_at`) VALUES ('CODE_1', 'Name: 1', 123456789, 'email_1@gmail.com', 8.0, 'Text: 1', '2024-03-04 10:54:57.637103', '2024-03-04 10:54:57.637103')[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTuition Create (0.5ms)[0m  [1m[32mINSERT INTO `tuitions` (`student_code`, `student_name`, `phone`, `gmail`, `amount_in_number`, `amount_in_text`, `created_at`, `updated_at`) VALUES ('CODE_2', 'Name: 2', 123456789, 'email_2@gmail.com', 8.0, 'Text: 2', '2024-03-04 10:54:57.641487', '2024-03-04 10:54:57.641487')[0m
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTuition Create (0.7ms)[0m  [1m[32mINSERT INTO `tuitions` (`student_code`, `student_name`, `phone`, `gmail`, `amount_in_number`, `amount_in_text`, `created_at`, `updated_at`) VALUES ('CODE_3', 'Name: 3', 123456789, 'email_3@gmail.com', 8.0, 'Text: 3', '2024-03-04 10:54:57.648132', '2024-03-04 10:54:57.648132')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTuition Create (0.7ms)[0m  [1m[32mINSERT INTO `tuitions` (`student_code`, `student_name`, `phone`, `gmail`, `amount_in_number`, `amount_in_text`, `created_at`, `updated_at`) VALUES ('CODE_4', 'Name: 4', 123456789, 'email_4@gmail.com', 8.0, 'Text: 4', '2024-03-04 10:54:57.652236', '2024-03-04 10:54:57.652236')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTuition Create (0.7ms)[0m  [1m[32mINSERT INTO `tuitions` (`student_code`, `student_name`, `phone`, `gmail`, `amount_in_number`, `amount_in_text`, `created_at`, `updated_at`) VALUES ('CODE_5', 'Name: 5', 123456789, 'email_5@gmail.com', 8.0, 'Text: 5', '2024-03-04 10:54:57.656421', '2024-03-04 10:54:57.656421')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTuition Create (0.7ms)[0m  [1m[32mINSERT INTO `tuitions` (`student_code`, `student_name`, `phone`, `gmail`, `amount_in_number`, `amount_in_text`, `created_at`, `updated_at`) VALUES ('CODE_6', 'Name: 6', 123456789, 'email_6@gmail.com', 8.0, 'Text: 6', '2024-03-04 10:54:57.660494', '2024-03-04 10:54:57.660494')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTuition Create (0.7ms)[0m  [1m[32mINSERT INTO `tuitions` (`student_code`, `student_name`, `phone`, `gmail`, `amount_in_number`, `amount_in_text`, `created_at`, `updated_at`) VALUES ('CODE_7', 'Name: 7', 123456789, 'email_7@gmail.com', 8.0, 'Text: 7', '2024-03-04 10:54:57.664482', '2024-03-04 10:54:57.664482')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTuition Create (0.7ms)[0m  [1m[32mINSERT INTO `tuitions` (`student_code`, `student_name`, `phone`, `gmail`, `amount_in_number`, `amount_in_text`, `created_at`, `updated_at`) VALUES ('CODE_8', 'Name: 8', 123456789, 'email_8@gmail.com', 8.0, 'Text: 8', '2024-03-04 10:54:57.668433', '2024-03-04 10:54:57.668433')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTuition Create (0.6ms)[0m  [1m[32mINSERT INTO `tuitions` (`student_code`, `student_name`, `phone`, `gmail`, `amount_in_number`, `amount_in_text`, `created_at`, `updated_at`) VALUES ('CODE_9', 'Name: 9', 123456789, 'email_9@gmail.com', 8.0, 'Text: 9', '2024-03-04 10:54:57.672390', '2024-03-04 10:54:57.672390')[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTuition Create (0.7ms)[0m  [1m[32mINSERT INTO `tuitions` (`student_code`, `student_name`, `phone`, `gmail`, `amount_in_number`, `amount_in_text`, `created_at`, `updated_at`) VALUES ('CODE_10', 'Name: 10', 123456789, 'email_10@gmail.com', 8.0, 'Text: 10', '2024-03-04 10:54:57.676271', '2024-03-04 10:54:57.676271')[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTuition Create (0.6ms)[0m  [1m[32mINSERT INTO `tuitions` (`student_code`, `student_name`, `phone`, `gmail`, `amount_in_number`, `amount_in_text`, `created_at`, `updated_at`) VALUES ('CODE_11', 'Name: 11', 123456789, 'email_11@gmail.com', 8.0, 'Text: 11', '2024-03-04 10:54:57.680126', '2024-03-04 10:54:57.680126')[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTuition Create (0.6ms)[0m  [1m[32mINSERT INTO `tuitions` (`student_code`, `student_name`, `phone`, `gmail`, `amount_in_number`, `amount_in_text`, `created_at`, `updated_at`) VALUES ('CODE_12', 'Name: 12', 123456789, 'email_12@gmail.com', 8.0, 'Text: 12', '2024-03-04 10:54:57.683925', '2024-03-04 10:54:57.683925')[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTuition Create (0.6ms)[0m  [1m[32mINSERT INTO `tuitions` (`student_code`, `student_name`, `phone`, `gmail`, `amount_in_number`, `amount_in_text`, `created_at`, `updated_at`) VALUES ('CODE_13', 'Name: 13', 123456789, 'email_13@gmail.com', 8.0, 'Text: 13', '2024-03-04 10:54:57.687668', '2024-03-04 10:54:57.687668')[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTuition Create (0.6ms)[0m  [1m[32mINSERT INTO `tuitions` (`student_code`, `student_name`, `phone`, `gmail`, `amount_in_number`, `amount_in_text`, `created_at`, `updated_at`) VALUES ('CODE_14', 'Name: 14', 123456789, 'email_14@gmail.com', 8.0, 'Text: 14', '2024-03-04 10:54:57.691018', '2024-03-04 10:54:57.691018')[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTuition Create (0.6ms)[0m  [1m[32mINSERT INTO `tuitions` (`student_code`, `student_name`, `phone`, `gmail`, `amount_in_number`, `amount_in_text`, `created_at`, `updated_at`) VALUES ('CODE_15', 'Name: 15', 123456789, 'email_15@gmail.com', 8.0, 'Text: 15', '2024-03-04 10:54:57.694615', '2024-03-04 10:54:57.694615')[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTuition Create (0.6ms)[0m  [1m[32mINSERT INTO `tuitions` (`student_code`, `student_name`, `phone`, `gmail`, `amount_in_number`, `amount_in_text`, `created_at`, `updated_at`) VALUES ('CODE_16', 'Name: 16', 123456789, 'email_16@gmail.com', 8.0, 'Text: 16', '2024-03-04 10:54:57.697953', '2024-03-04 10:54:57.697953')[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTuition Create (0.6ms)[0m  [1m[32mINSERT INTO `tuitions` (`student_code`, `student_name`, `phone`, `gmail`, `amount_in_number`, `amount_in_text`, `created_at`, `updated_at`) VALUES ('CODE_17', 'Name: 17', 123456789, 'email_17@gmail.com', 8.0, 'Text: 17', '2024-03-04 10:54:57.701542', '2024-03-04 10:54:57.701542')[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTuition Create (0.6ms)[0m  [1m[32mINSERT INTO `tuitions` (`student_code`, `student_name`, `phone`, `gmail`, `amount_in_number`, `amount_in_text`, `created_at`, `updated_at`) VALUES ('CODE_18', 'Name: 18', 123456789, 'email_18@gmail.com', 8.0, 'Text: 18', '2024-03-04 10:54:57.704769', '2024-03-04 10:54:57.704769')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTuition Create (0.6ms)[0m  [1m[32mINSERT INTO `tuitions` (`student_code`, `student_name`, `phone`, `gmail`, `amount_in_number`, `amount_in_text`, `created_at`, `updated_at`) VALUES ('CODE_19', 'Name: 19', 123456789, 'email_19@gmail.com', 8.0, 'Text: 19', '2024-03-04 10:54:57.708478', '2024-03-04 10:54:57.708478')[0m
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTuition Create (0.6ms)[0m  [1m[32mINSERT INTO `tuitions` (`student_code`, `student_name`, `phone`, `gmail`, `amount_in_number`, `amount_in_text`, `created_at`, `updated_at`) VALUES ('CODE_20', 'Name: 20', 123456789, 'email_20@gmail.com', 8.0, 'Text: 20', '2024-03-04 10:54:57.713116', '2024-03-04 10:54:57.713116')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (0.8ms)[0m  [1m[32mINSERT INTO `students` (`student_code`, `student_name`, `date_of_birth`, `address`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_1', 'Name: 1', '2024-03-05', 'Ha Noi', 'email_1@gmail.com', 123456789, '2024-03-05 01:30:36.864881', '2024-03-05 01:30:36.864881')[0m
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO `students` (`student_code`, `student_name`, `date_of_birth`, `address`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_2', 'Name: 2', '2024-03-05', 'Ha Noi', 'email_2@gmail.com', 123456789, '2024-03-05 01:30:36.869578', '2024-03-05 01:30:36.869578')[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO `students` (`student_code`, `student_name`, `date_of_birth`, `address`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_3', 'Name: 3', '2024-03-05', 'Ha Noi', 'email_3@gmail.com', 123456789, '2024-03-05 01:30:36.872947', '2024-03-05 01:30:36.872947')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (0.7ms)[0m  [1m[32mINSERT INTO `students` (`student_code`, `student_name`, `date_of_birth`, `address`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_4', 'Name: 4', '2024-03-05', 'Ha Noi', 'email_4@gmail.com', 123456789, '2024-03-05 01:30:36.876724', '2024-03-05 01:30:36.876724')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (0.9ms)[0m  [1m[32mINSERT INTO `students` (`student_code`, `student_name`, `date_of_birth`, `address`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_5', 'Name: 5', '2024-03-05', 'Ha Noi', 'email_5@gmail.com', 123456789, '2024-03-05 01:30:36.881091', '2024-03-05 01:30:36.881091')[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (1.3ms)[0m  [1m[32mINSERT INTO `students` (`student_code`, `student_name`, `date_of_birth`, `address`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_6', 'Name: 6', '2024-03-05', 'Ha Noi', 'email_6@gmail.com', 123456789, '2024-03-05 01:30:36.886095', '2024-03-05 01:30:36.886095')[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (1.1ms)[0m  [1m[32mINSERT INTO `students` (`student_code`, `student_name`, `date_of_birth`, `address`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_7', 'Name: 7', '2024-03-05', 'Ha Noi', 'email_7@gmail.com', 123456789, '2024-03-05 01:30:36.892160', '2024-03-05 01:30:36.892160')[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (1.0ms)[0m  [1m[32mINSERT INTO `students` (`student_code`, `student_name`, `date_of_birth`, `address`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_8', 'Name: 8', '2024-03-05', 'Ha Noi', 'email_8@gmail.com', 123456789, '2024-03-05 01:30:36.897763', '2024-03-05 01:30:36.897763')[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (0.9ms)[0m  [1m[32mINSERT INTO `students` (`student_code`, `student_name`, `date_of_birth`, `address`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_9', 'Name: 9', '2024-03-05', 'Ha Noi', 'email_9@gmail.com', 123456789, '2024-03-05 01:30:36.902861', '2024-03-05 01:30:36.902861')[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (0.8ms)[0m  [1m[32mINSERT INTO `students` (`student_code`, `student_name`, `date_of_birth`, `address`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_10', 'Name: 10', '2024-03-05', 'Ha Noi', 'email_10@gmail.com', 123456789, '2024-03-05 01:30:36.907250', '2024-03-05 01:30:36.907250')[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (0.9ms)[0m  [1m[32mINSERT INTO `students` (`student_code`, `student_name`, `date_of_birth`, `address`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_11', 'Name: 11', '2024-03-05', 'Ha Noi', 'email_11@gmail.com', 123456789, '2024-03-05 01:30:36.911753', '2024-03-05 01:30:36.911753')[0m
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (0.8ms)[0m  [1m[32mINSERT INTO `students` (`student_code`, `student_name`, `date_of_birth`, `address`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_12', 'Name: 12', '2024-03-05', 'Ha Noi', 'email_12@gmail.com', 123456789, '2024-03-05 01:30:36.917001', '2024-03-05 01:30:36.917001')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (0.7ms)[0m  [1m[32mINSERT INTO `students` (`student_code`, `student_name`, `date_of_birth`, `address`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_13', 'Name: 13', '2024-03-05', 'Ha Noi', 'email_13@gmail.com', 123456789, '2024-03-05 01:30:36.921271', '2024-03-05 01:30:36.921271')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (0.7ms)[0m  [1m[32mINSERT INTO `students` (`student_code`, `student_name`, `date_of_birth`, `address`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_14', 'Name: 14', '2024-03-05', 'Ha Noi', 'email_14@gmail.com', 123456789, '2024-03-05 01:30:36.925503', '2024-03-05 01:30:36.925503')[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO `students` (`student_code`, `student_name`, `date_of_birth`, `address`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_15', 'Name: 15', '2024-03-05', 'Ha Noi', 'email_15@gmail.com', 123456789, '2024-03-05 01:30:36.929067', '2024-03-05 01:30:36.929067')[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO `students` (`student_code`, `student_name`, `date_of_birth`, `address`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_16', 'Name: 16', '2024-03-05', 'Ha Noi', 'email_16@gmail.com', 123456789, '2024-03-05 01:30:36.932837', '2024-03-05 01:30:36.932837')[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO `students` (`student_code`, `student_name`, `date_of_birth`, `address`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_17', 'Name: 17', '2024-03-05', 'Ha Noi', 'email_17@gmail.com', 123456789, '2024-03-05 01:30:36.936892', '2024-03-05 01:30:36.936892')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO `students` (`student_code`, `student_name`, `date_of_birth`, `address`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_18', 'Name: 18', '2024-03-05', 'Ha Noi', 'email_18@gmail.com', 123456789, '2024-03-05 01:30:36.940847', '2024-03-05 01:30:36.940847')[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO `students` (`student_code`, `student_name`, `date_of_birth`, `address`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_19', 'Name: 19', '2024-03-05', 'Ha Noi', 'email_19@gmail.com', 123456789, '2024-03-05 01:30:36.944796', '2024-03-05 01:30:36.944796')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO `students` (`student_code`, `student_name`, `date_of_birth`, `address`, `gmail`, `phone`, `created_at`, `updated_at`) VALUES ('CODE_20', 'Name: 20', '2024-03-05', 'Ha Noi', 'email_20@gmail.com', 123456789, '2024-03-05 01:30:36.948745', '2024-03-05 01:30:36.948745')[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateClasseds (20240305014559)
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE TABLE `classeds` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240305014559')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/classes/index" for ::1 at 2024-03-05 08:59:04 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/classes/index"):
+  
+Started GET "/your_controller_name/index" for ::1 at 2024-03-05 09:01:08 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/your_controller_name/index"):
+  
+Started GET "/classes/index" for ::1 at 2024-03-05 09:01:18 +0700
+  
+NameError (uninitialized constant ApplicationController
+Did you mean?  ApplicationRecord):
+  
+app/controllers/classes_controller.rb:1:in `<main>'
+Started GET "/classes_controller/index" for 127.0.0.1 at 2024-03-05 09:12:52 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (uninitialized constant ClassesControllerController):
+  
+Started GET "/classes/index" for 127.0.0.1 at 2024-03-05 09:13:23 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+NameError (uninitialized constant ApplicationController
+Did you mean?  ApplicationRecord):
+  
+app/controllers/classes_controller.rb:1:in `<main>'
+Started GET "/classes/index" for 127.0.0.1 at 2024-03-05 09:17:29 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+NameError (uninitialized constant ApplicationController
+Did you mean?  ApplicationRecord):
+  
+app/controllers/classes_controller.rb:1:in `<main>'
+Started GET "/classes/index" for 127.0.0.1 at 2024-03-05 09:20:46 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+NameError (uninitialized constant ApplicationController
+Did you mean?  ApplicationRecord):
+  
+app/controllers/classes_controller.rb:1:in `<main>'
+Started GET "/classes/index" for 127.0.0.1 at 2024-03-05 09:23:37 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+NameError (uninitialized constant ApplicationController
+Did you mean?  ApplicationRecord):
+  
+app/controllers/classes_controller.rb:1:in `<main>'
+Started GET "/classes_controller/index" for 127.0.0.1 at 2024-03-05 09:28:22 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/classes_controller/index"):
+  
+Started GET "/classes_controller/index" for 127.0.0.1 at 2024-03-05 09:28:23 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/classes_controller/index"):
+  
+Started GET "/classes_controller/index" for 127.0.0.1 at 2024-03-05 09:28:24 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/classes_controller/index"):
+  
+Started GET "/classes_controller/index" for 127.0.0.1 at 2024-03-05 09:28:24 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/classes_controller/index"):
+  
+Started GET "/classes_controller/index" for 127.0.0.1 at 2024-03-05 09:28:25 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/classes_controller/index"):
+  
+Started GET "/classes/index" for 127.0.0.1 at 2024-03-05 09:41:33 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/classes/index"):
+  
+Started GET "/classes_controller/index" for 127.0.0.1 at 2024-03-05 09:41:45 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/classes_controller/index"):
+  
+Started GET "/classes/index" for 127.0.0.1 at 2024-03-05 09:41:50 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/classes/index"):
+  
+Started GET "/classes/index" for 127.0.0.1 at 2024-03-05 09:42:00 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/classes/index"):
+  
+Started GET "/" for 127.0.0.1 at 2024-03-05 09:42:16 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 486)
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 4049)
+
+
+Started GET "/classes/index" for 127.0.0.1 at 2024-03-05 09:44:21 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/classes/index"):
+  
+Started GET "/classes_controller/index" for 127.0.0.1 at 2024-03-05 09:44:38 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/classes_controller/index"):
+  
+Started GET "/classes/index" for 127.0.0.1 at 2024-03-05 09:50:36 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/classes/index"):
+  
+Started GET "/classes/index" for 127.0.0.1 at 2024-03-05 09:50:38 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/classes/index"):
+  
+Started GET "/test" for 127.0.0.1 at 2024-03-05 09:51:58 +0700
+  
+NameError (uninitialized constant ApplicationController
+Did you mean?  ApplicationRecord):
+  
+app/controllers/classes_controller.rb:1:in `<main>'
+Started GET "/test" for 127.0.0.1 at 2024-03-05 09:52:39 +0700
+  
+NameError (uninitialized constant ApplicationController
+Did you mean?  ApplicationRecord):
+  
+app/controllers/classes_controller.rb:1:in `<main>'
+Started GET "/test" for 127.0.0.1 at 2024-03-05 09:52:40 +0700
+  
+NameError (uninitialized constant ApplicationController
+Did you mean?  ApplicationRecord):
+  
+app/controllers/classes_controller.rb:1:in `<main>'
+Started GET "/test" for 127.0.0.1 at 2024-03-05 09:53:17 +0700
+Processing by ClassesController#index as HTML
+  Rendering classes/index.html.erb
+  Rendered classes/index.html.erb (Duration: 0.7ms | Allocations: 1571)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 4877)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1> My Data</h1>
+    2: <u1>
+    3:     <% @lasses.each do |item| %>
+    4:   <li><%=item.classes %></li>
+    5:   <% end %>
+    6: </u1>
+  
+app/views/classes/index.html.erb:3
+Started GET "/test" for 127.0.0.1 at 2024-03-05 09:53:18 +0700
+Processing by ClassesController#index as HTML
+  Rendering classes/index.html.erb
+  Rendered classes/index.html.erb (Duration: 1.3ms | Allocations: 1379)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1692)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1> My Data</h1>
+    2: <u1>
+    3:     <% @lasses.each do |item| %>
+    4:   <li><%=item.classes %></li>
+    5:   <% end %>
+    6: </u1>
+  
+app/views/classes/index.html.erb:3
+Started GET "/test" for 127.0.0.1 at 2024-03-05 09:53:18 +0700
+Processing by ClassesController#index as HTML
+  Rendering classes/index.html.erb
+  Rendered classes/index.html.erb (Duration: 0.9ms | Allocations: 1377)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1673)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1> My Data</h1>
+    2: <u1>
+    3:     <% @lasses.each do |item| %>
+    4:   <li><%=item.classes %></li>
+    5:   <% end %>
+    6: </u1>
+  
+app/views/classes/index.html.erb:3
+Started GET "/test" for 127.0.0.1 at 2024-03-05 09:53:23 +0700
+Processing by ClassesController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 2438)
+
+
+  
+NameError (uninitialized constant ClassesController::CreateClasses
+Did you mean?  CreateClassedHelper):
+  
+app/controllers/classes_controller.rb:3:in `index'
+Started GET "/test" for 127.0.0.1 at 2024-03-05 09:53:23 +0700
+Processing by ClassesController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2365)
+
+
+  
+NameError (uninitialized constant ClassesController::CreateClasses
+Did you mean?  CreateClassedHelper):
+  
+app/controllers/classes_controller.rb:3:in `index'
+Started GET "/test" for 127.0.0.1 at 2024-03-05 09:53:23 +0700
+Processing by ClassesController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2365)
+
+
+  
+NameError (uninitialized constant ClassesController::CreateClasses
+Did you mean?  CreateClassedHelper):
+  
+app/controllers/classes_controller.rb:3:in `index'
+Started GET "/test" for 127.0.0.1 at 2024-03-05 09:53:24 +0700
+Processing by ClassesController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2365)
+
+
+  
+NameError (uninitialized constant ClassesController::CreateClasses
+Did you mean?  CreateClassedHelper):
+  
+app/controllers/classes_controller.rb:3:in `index'
+Started GET "/test" for 127.0.0.1 at 2024-03-05 09:54:43 +0700
+Processing by ClassesController#index as HTML
+  Rendering classes/index.html.erb
+  Rendered classes/index.html.erb (Duration: 0.7ms | Allocations: 1530)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 15242)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1> My Data</h1>
+    2: <u1>
+    3:     <% @lasses.each do |item| %>
+    4:   <li><%=item.classes %></li>
+    5:   <% end %>
+    6: </u1>
+  
+app/views/classes/index.html.erb:3
+Started GET "/test" for 127.0.0.1 at 2024-03-05 09:54:44 +0700
+Processing by ClassesController#index as HTML
+  Rendering classes/index.html.erb
+  Rendered classes/index.html.erb (Duration: 2.1ms | Allocations: 1379)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1711)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1> My Data</h1>
+    2: <u1>
+    3:     <% @lasses.each do |item| %>
+    4:   <li><%=item.classes %></li>
+    5:   <% end %>
+    6: </u1>
+  
+app/views/classes/index.html.erb:3
+Started GET "/test" for 127.0.0.1 at 2024-03-05 09:54:44 +0700
+Processing by ClassesController#index as HTML
+  Rendering classes/index.html.erb
+  Rendered classes/index.html.erb (Duration: 0.5ms | Allocations: 1377)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1685)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1> My Data</h1>
+    2: <u1>
+    3:     <% @lasses.each do |item| %>
+    4:   <li><%=item.classes %></li>
+    5:   <% end %>
+    6: </u1>
+  
+app/views/classes/index.html.erb:3
+Started GET "/test" for 127.0.0.1 at 2024-03-05 09:54:44 +0700
+Processing by ClassesController#index as HTML
+  Rendering classes/index.html.erb
+  Rendered classes/index.html.erb (Duration: 0.6ms | Allocations: 1377)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1685)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1> My Data</h1>
+    2: <u1>
+    3:     <% @lasses.each do |item| %>
+    4:   <li><%=item.classes %></li>
+    5:   <% end %>
+    6: </u1>
+  
+app/views/classes/index.html.erb:3
+Started GET "/test" for 127.0.0.1 at 2024-03-05 09:54:59 +0700
+Processing by ClassesController#index as HTML
+  Rendering classes/index.html.erb
+  Rendered classes/index.html.erb (Duration: 0.2ms | Allocations: 203)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 2474)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateClasseds (20240305025900)
+  [1m[35m (40.3ms)[0m  [1m[35mCREATE TABLE `classeds` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240305025900')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/classes" for ::1 at 2024-03-05 10:27:43 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/classes"):
+  
+Started GET "/classed" for ::1 at 2024-03-05 10:27:57 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/classed"):
+  
+Started GET "/test" for ::1 at 2024-03-05 10:28:08 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/test"):
+  
+Started GET "/test" for ::1 at 2024-03-05 10:28:11 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/test"):
+  
+Started GET "/classed" for ::1 at 2024-03-05 10:33:50 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/classed"):
+  
+Started GET "/classes" for ::1 at 2024-03-05 10:33:56 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/classes"):
+  
+Started GET "/classes" for ::1 at 2024-03-05 10:33:58 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/classes"):
+  
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateUsers (20240305033541)
+  [1m[35m (16.2ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240305033541')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/users" for ::1 at 2024-03-05 10:41:08 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+NameError (uninitialized constant ApplicationController
+Did you mean?  ApplicationRecord):
+  
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/users" for ::1 at 2024-03-05 10:41:47 +0700
+  
+NameError (uninitialized constant Base
+Did you mean?  Base64):
+  
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/users" for ::1 at 2024-03-05 10:42:05 +0700
+  
+NameError (uninitialized constant ApplicationController
+Did you mean?  ApplicationRecord):
+  
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/users" for ::1 at 2024-03-05 10:43:01 +0700
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 4845)
+
+
+  
+NameError (undefined local variable or method `user' for #<UsersController:0x00000000014848>
+Did you mean?  super):
+  
+app/controllers/users_controller.rb:3:in `index'
+Started GET "/users" for ::1 at 2024-03-05 10:43:22 +0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb (Duration: 1.6ms | Allocations: 1178)
+Completed 200 OK in 8ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 14114)
+
+
+Started GET "/users" for ::1 at 2024-03-05 10:43:52 +0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb (Duration: 1.0ms | Allocations: 921)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 3156)
+
+
+Started GET "/users" for ::1 at 2024-03-05 10:43:53 +0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb (Duration: 3.0ms | Allocations: 573)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 930)
+
+
+Started GET "/users" for ::1 at 2024-03-05 10:43:54 +0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb (Duration: 2.1ms | Allocations: 573)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 909)
+
+
+Started GET "/users" for ::1 at 2024-03-05 10:43:54 +0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb (Duration: 2.3ms | Allocations: 570)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users" for ::1 at 2024-03-05 10:43:54 +0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb (Duration: 2.0ms | Allocations: 570)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users" for ::1 at 2024-03-05 10:43:55 +0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb (Duration: 1.9ms | Allocations: 570)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/users" for ::1 at 2024-03-05 10:44:03 +0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb (Duration: 1.1ms | Allocations: 922)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 3161)
+
+
+Started GET "/users" for ::1 at 2024-03-05 10:44:12 +0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb (Duration: 0.9ms | Allocations: 920)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 3155)
+
+
+Started GET "/student" for ::1 at 2024-03-05 11:08:44 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/student"):
+  
+Started GET "/students" for ::1 at 2024-03-05 11:08:50 +0700
+  
+ActionController::RoutingError (uninitialized constant StudentsController
+Did you mean?  StudentController):
+  
+Started GET "/users" for ::1 at 2024-03-05 11:11:06 +0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb (Duration: 2.8ms | Allocations: 1065)
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.7ms | Allocations: 3255)
+
+
+Started GET "/users" for ::1 at 2024-03-05 11:11:06 +0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb (Duration: 1.4ms | Allocations: 570)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 922)
+
+
+Started GET "/users" for ::1 at 2024-03-05 11:11:07 +0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb (Duration: 0.9ms | Allocations: 570)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 902)
+
+
+Started GET "/users" for ::1 at 2024-03-05 11:11:07 +0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb (Duration: 1.6ms | Allocations: 570)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateStudensts (20240305041519)
+  [1m[35m (17.4ms)[0m  [1m[35mCREATE TABLE `studensts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `age` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240305041519')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/student" for ::1 at 2024-03-05 11:25:44 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (uninitialized constant StudentController
+Did you mean?  StudentsController):
+  
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateDuongs (20240305043127)
+  [1m[35m (18.3ms)[0m  [1m[35mCREATE TABLE `duongs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `age` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240305043127')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/duong" for ::1 at 2024-03-05 11:34:33 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+NameError (uninitialized constant ApplicationController
+Did you mean?  ApplicationRecord):
+  
+app/controllers/duong_controller.rb:1:in `<main>'
+Started GET "/duong" for ::1 at 2024-03-05 11:35:14 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.1ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 1.3ms | Allocations: 1057)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 3323)
+
+
+Started GET "/duong" for ::1 at 2024-03-05 11:35:16 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.2ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 0.7ms | Allocations: 570)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 922)
+
+
+Started GET "/duong" for ::1 at 2024-03-05 11:35:17 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.1ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 0.9ms | Allocations: 570)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 902)
+
+
+Started GET "/duong" for ::1 at 2024-03-05 11:35:17 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.4ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 2.1ms | Allocations: 570)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/duong" for ::1 at 2024-03-05 11:35:17 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.4ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 2.3ms | Allocations: 570)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/duong" for ::1 at 2024-03-05 11:36:36 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.2ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 1.1ms | Allocations: 913)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 3151)
+
+
+Started GET "/duong" for ::1 at 2024-03-05 11:36:50 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.4ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 2.2ms | Allocations: 570)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 922)
+
+
+Started GET "/users" for ::1 at 2024-03-05 11:42:32 +0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb (Duration: 2.3ms | Allocations: 1061)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.4ms | Allocations: 2559)
+
+
+Started GET "/tuition" for ::1 at 2024-03-05 13:52:16 +0700
+  
+NameError (uninitialized constant ApplicationController
+Did you mean?  ApplicationRecord):
+  
+app/controllers/tuition_controller.rb:1:in `<main>'
+Started GET "/tuition" for ::1 at 2024-03-05 13:52:32 +0700
+Processing by TuitionController#index as HTML
+  Rendering tuition/index.html.erb
+  [1m[36mTuition Load (0.2ms)[0m  [1m[34mSELECT `tuitions`.* FROM `tuitions`[0m
+  ↳ app/views/tuition/index.html.erb:3
+  Rendered tuition/index.html.erb (Duration: 30.8ms | Allocations: 128999)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 1.7ms | Allocations: 131226)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `index' for #<ActionView::Base:0x00000000039670>):
+    1: <h1>Tuition</h1>
+    2: <u1>
+    3:   <% @tuition.each do |tuition| %>
+    4:   <li><%= Tuition.create(student_code: "CODE_#{index}", student_name: "Name: #{index}",
+    5:                  phone: '0123456789', gmail: "email_#{index}@gmail.com", amount_in_number: '8', amount_in_text: "Text: #{index}")%></li>
+    6:   <% end %>
+    7: </u1>
+  
+app/views/tuition/index.html.erb:4
+app/views/tuition/index.html.erb:3
+Started GET "/tuition" for ::1 at 2024-03-05 13:53:22 +0700
+Processing by TuitionController#index as HTML
+  Rendering tuition/index.html.erb
+  [1m[36mTuition Load (0.2ms)[0m  [1m[34mSELECT `tuitions`.* FROM `tuitions`[0m
+  ↳ app/views/tuition/index.html.erb:3
+  Rendered tuition/index.html.erb (Duration: 4.5ms | Allocations: 5206)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 1.5ms | Allocations: 7449)
+
+
+Started GET "/tuition" for ::1 at 2024-03-05 13:53:35 +0700
+Processing by TuitionController#index as HTML
+  Rendering tuition/index.html.erb
+  [1m[36mTuition Load (0.2ms)[0m  [1m[34mSELECT `tuitions`.* FROM `tuitions`[0m
+  ↳ app/views/tuition/index.html.erb:3
+  Rendered tuition/index.html.erb (Duration: 5.0ms | Allocations: 5141)
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 1.6ms | Allocations: 7381)
+
+
+Started GET "/tuition" for ::1 at 2024-03-05 13:56:12 +0700
+Processing by TuitionController#index as HTML
+  Rendering tuition/index.html.erb
+  [1m[36mTuition Load (0.2ms)[0m  [1m[34mSELECT `tuitions`.* FROM `tuitions`[0m
+  ↳ app/views/tuition/index.html.erb:3
+  Rendered tuition/index.html.erb (Duration: 5.5ms | Allocations: 5262)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 1.6ms | Allocations: 7502)
+
+
+Started GET "/tuition" for ::1 at 2024-03-05 13:58:59 +0700
+Processing by TuitionController#index as HTML
+  Rendering tuition/index.html.erb
+  [1m[36mTuition Load (0.2ms)[0m  [1m[34mSELECT `tuitions`.* FROM `tuitions`[0m
+  ↳ app/views/tuition/index.html.erb:3
+  Rendered tuition/index.html.erb (Duration: 5.1ms | Allocations: 5357)
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 1.5ms | Allocations: 7597)
+
+
+Started GET "/tuition" for ::1 at 2024-03-05 13:59:50 +0700
+Processing by TuitionController#index as HTML
+  Rendering tuition/index.html.erb
+  [1m[36mTuition Load (0.2ms)[0m  [1m[34mSELECT `tuitions`.* FROM `tuitions`[0m
+  ↳ app/views/tuition/index.html.erb:3
+  Rendered tuition/index.html.erb (Duration: 4.5ms | Allocations: 5348)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 1.5ms | Allocations: 7588)
+
+
+Started GET "/tuition" for ::1 at 2024-03-05 13:59:51 +0700
+Processing by TuitionController#index as HTML
+  Rendering tuition/index.html.erb
+  [1m[36mTuition Load (0.2ms)[0m  [1m[34mSELECT `tuitions`.* FROM `tuitions`[0m
+  ↳ app/views/tuition/index.html.erb:3
+  Rendered tuition/index.html.erb (Duration: 0.9ms | Allocations: 1022)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 1374)
+
+
+Started GET "/tuition" for ::1 at 2024-03-05 13:59:51 +0700
+Processing by TuitionController#index as HTML
+  Rendering tuition/index.html.erb
+  [1m[36mTuition Load (0.6ms)[0m  [1m[34mSELECT `tuitions`.* FROM `tuitions`[0m
+  ↳ app/views/tuition/index.html.erb:3
+  Rendered tuition/index.html.erb (Duration: 4.0ms | Allocations: 1021)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.6ms | Allocations: 1353)
+
+
+Started GET "/tuition" for ::1 at 2024-03-05 14:00:41 +0700
+Processing by TuitionController#index as HTML
+  Rendering tuition/index.html.erb
+  [1m[36mTuition Load (0.2ms)[0m  [1m[34mSELECT `tuitions`.* FROM `tuitions`[0m
+  ↳ app/views/tuition/index.html.erb:3
+  Rendered tuition/index.html.erb (Duration: 4.6ms | Allocations: 5407)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 1.5ms | Allocations: 7654)
+
+
+Started GET "/tuition" for ::1 at 2024-03-05 14:00:42 +0700
+Processing by TuitionController#index as HTML
+  Rendering tuition/index.html.erb
+  [1m[36mTuition Load (0.2ms)[0m  [1m[34mSELECT `tuitions`.* FROM `tuitions`[0m
+  ↳ app/views/tuition/index.html.erb:3
+  Rendered tuition/index.html.erb (Duration: 1.0ms | Allocations: 1042)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 1394)
+
+
+Started GET "/tuition" for ::1 at 2024-03-05 14:00:42 +0700
+Processing by TuitionController#index as HTML
+  Rendering tuition/index.html.erb
+  [1m[36mTuition Load (0.5ms)[0m  [1m[34mSELECT `tuitions`.* FROM `tuitions`[0m
+  ↳ app/views/tuition/index.html.erb:3
+  Rendered tuition/index.html.erb (Duration: 4.0ms | Allocations: 1041)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.5ms | Allocations: 1373)
+
+
+Started GET "/tuition" for ::1 at 2024-03-05 14:00:42 +0700
+Processing by TuitionController#index as HTML
+  Rendering tuition/index.html.erb
+  [1m[36mTuition Load (0.3ms)[0m  [1m[34mSELECT `tuitions`.* FROM `tuitions`[0m
+  ↳ app/views/tuition/index.html.erb:3
+  Rendered tuition/index.html.erb (Duration: 2.1ms | Allocations: 1041)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1373)
+
+
+Started GET "/tuition" for ::1 at 2024-03-05 14:01:13 +0700
+Processing by TuitionController#index as HTML
+  Rendering tuition/index.html.erb
+  [1m[36mTuition Load (0.2ms)[0m  [1m[34mSELECT `tuitions`.* FROM `tuitions`[0m
+  ↳ app/views/tuition/index.html.erb:3
+  Rendered tuition/index.html.erb (Duration: 5.0ms | Allocations: 5383)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 1.7ms | Allocations: 7627)
+
+
+Started GET "/tuition" for ::1 at 2024-03-05 14:01:45 +0700
+Processing by TuitionController#index as HTML
+  Rendering tuition/index.html.erb
+  [1m[36mTuition Load (0.2ms)[0m  [1m[34mSELECT `tuitions`.* FROM `tuitions`[0m
+  ↳ app/views/tuition/index.html.erb:3
+  Rendered tuition/index.html.erb (Duration: 5.0ms | Allocations: 5385)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 1.5ms | Allocations: 7628)
+
+
+Started GET "/tuition" for ::1 at 2024-03-05 14:01:46 +0700
+Processing by TuitionController#index as HTML
+  Rendering tuition/index.html.erb
+  [1m[36mTuition Load (0.5ms)[0m  [1m[34mSELECT `tuitions`.* FROM `tuitions`[0m
+  ↳ app/views/tuition/index.html.erb:3
+  Rendered tuition/index.html.erb (Duration: 3.5ms | Allocations: 1042)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.5ms | Allocations: 1394)
+
+
+Started GET "/tuition" for ::1 at 2024-03-05 14:01:46 +0700
+Processing by TuitionController#index as HTML
+  Rendering tuition/index.html.erb
+  [1m[36mTuition Load (0.2ms)[0m  [1m[34mSELECT `tuitions`.* FROM `tuitions`[0m
+  ↳ app/views/tuition/index.html.erb:3
+  Rendered tuition/index.html.erb (Duration: 0.9ms | Allocations: 1041)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 1373)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/student" for ::1 at 2024-03-05 14:12:34 +0700
+  
+NameError (uninitialized constant ApplicationController
+Did you mean?  ApplicationRecord):
+  
+app/controllers/student_controller.rb:1:in `<main>'
+Started GET "/student" for ::1 at 2024-03-05 14:12:59 +0700
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  ↳ app/views/student/index.html.erb:3
+  Rendered student/index.html.erb (Duration: 11.2ms | Allocations: 33560)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.5ms | Allocations: 35802)
+
+
+  
+ActionView::Template::Error (undefined method `gender' for #<Student id: 1, student_code: "100", student_name: "Nguyen Van A", date_of_birth: "2001-01-01", address: "Ha Noi", gmail: "abc123@gmail.com", phone: 123456789, created_at: "2024-01-01 00:00:00.000000000 +0000", updated_at: "2024-01-01 00:00:00.000000000 +0000">):
+    4:     <li><%= "Student code: #{student.student_code}
+    5:              Student name: #{student.student_name}
+    6:              Date of birth: #{student.date_of_birth}
+    7:              Gender: #{student.gender}
+    8:              Address: #{student.address}
+    9:              Gmail: #{student.gmail}
+   10:              Phone; #{student.phone}"  %></li>
+  
+app/views/student/index.html.erb:7
+app/views/student/index.html.erb:3
+Started GET "/student" for ::1 at 2024-03-05 14:13:44 +0700
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  ↳ app/views/student/index.html.erb:3
+  Rendered student/index.html.erb (Duration: 4.7ms | Allocations: 5480)
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 1.5ms | Allocations: 7724)
+
+
+Started GET "/student" for ::1 at 2024-03-05 14:13:58 +0700
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  ↳ app/views/student/index.html.erb:3
+  Rendered student/index.html.erb (Duration: 4.7ms | Allocations: 5425)
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 1.5ms | Allocations: 7665)
+
+
+Started GET "/student" for ::1 at 2024-03-05 14:34:11 +0700
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  ↳ app/views/student/index.html.erb:3
+  Rendered student/index.html.erb (Duration: 3.5ms | Allocations: 5107)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms | Allocations: 7348)
+
+
+Started GET "/teacher" for ::1 at 2024-03-05 14:34:17 +0700
+  
+NameError (uninitialized constant ApplicationController
+Did you mean?  ApplicationRecord):
+  
+app/controllers/teacher_controller.rb:1:in `<main>'
+Started GET "/teacher" for ::1 at 2024-03-05 14:34:32 +0700
+Processing by TeacherController#index as HTML
+  Rendering teacher/index.html.erb
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT `teachers`.* FROM `teachers`[0m
+  ↳ app/views/teacher/index.html.erb:3
+  Rendered teacher/index.html.erb (Duration: 12.3ms | Allocations: 45120)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.6ms | Allocations: 47339)
+
+
+  
+ActionView::Template::Error (undefined method `address' for #<Teacher id: 1, teacher_code: "CODE_1", teacher_name: "Name: 1", date_of_birth: "2024-03-04", gender: "Nam", gmail: "email_1@gmail.com", phone: 123445555, created_at: "2024-03-04 10:23:50.775495000 +0000", updated_at: "2024-03-04 10:23:50.775495000 +0000">):
+     5:              Teacher name: #{teacher.teacher_name},
+     6:              Date_of_birth: #{teacher.date_of_birth},
+     7:              Gender: #{teacher.gender},
+     8:              Address: #{teacher.address},
+     9:              Gmail: #{teacher.gmail},
+    10:              Phone: #{teacher.phone}"  %></li>
+    11:   <% end %>
+  
+app/views/teacher/index.html.erb:8
+app/views/teacher/index.html.erb:3
+Started GET "/teacher" for ::1 at 2024-03-05 14:35:12 +0700
+Processing by TeacherController#index as HTML
+  Rendering teacher/index.html.erb
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT `teachers`.* FROM `teachers`[0m
+  ↳ app/views/teacher/index.html.erb:3
+  Rendered teacher/index.html.erb (Duration: 5.2ms | Allocations: 5456)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 1.8ms | Allocations: 7700)
+
+
+Started GET "/transcript" for ::1 at 2024-03-05 14:49:36 +0700
+Processing by TranscriptController#index as HTML
+  Rendering transcript/index.html.erb
+  [1m[36mTranscript Load (0.2ms)[0m  [1m[34mSELECT `transcripts`.* FROM `transcripts`[0m
+  ↳ app/views/transcript/index.html.erb:3
+  Rendered transcript/index.html.erb (Duration: 16.9ms | Allocations: 33489)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.3ms | Allocations: 35704)
+
+
+  
+ActionView::Template::Error (undefined method `date_of_birh' for #<Transcript id: 1, student_code: "CODE_1", student_name: "Name: 1", date_of_birth: "2024-03-04", gender: "Nam", majors_code: "Majors_1", scores: 8.0, created_at: "2024-03-04 10:49:33.714194000 +0000", updated_at: "2024-03-04 10:49:33.714194000 +0000">
+Did you mean?  date_of_birth
+               date_of_birth?
+               date_of_birth=):
+    3:   <% @transcript.each do |transcript| %>
+    4:   <li><%= "Student code: #{transcript.student_code}
+    5:            Student name: #{transcript.student_name}
+    6:            Date of birth: #{transcript.date_of_birh}
+    7:            Gender: #{transcript.gender}
+    8:            Majors code: #{transcript.majors_code}
+    9:            Scores: #{transcript.scores}" %></li>
+  
+app/views/transcript/index.html.erb:6
+app/views/transcript/index.html.erb:3
+Started GET "/transcript" for ::1 at 2024-03-05 14:49:50 +0700
+Processing by TranscriptController#index as HTML
+  Rendering transcript/index.html.erb
+  [1m[36mTranscript Load (0.2ms)[0m  [1m[34mSELECT `transcripts`.* FROM `transcripts`[0m
+  ↳ app/views/transcript/index.html.erb:3
+  Rendered transcript/index.html.erb (Duration: 4.7ms | Allocations: 5448)
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 1.6ms | Allocations: 7692)
+
+
+Started GET "/transcript" for ::1 at 2024-03-05 14:51:12 +0700
+Processing by TranscriptController#index as HTML
+  Rendering transcript/index.html.erb
+  [1m[36mTranscript Load (0.2ms)[0m  [1m[34mSELECT `transcripts`.* FROM `transcripts`[0m
+  ↳ app/views/transcript/index.html.erb:3
+  Rendered transcript/index.html.erb (Duration: 14.2ms | Allocations: 5402)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 1.7ms | Allocations: 7644)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateClassses (20240305080615)
+  [1m[35m (54.1ms)[0m  [1m[35mCREATE TABLE `classses` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240305080615')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateClasss (20240305081618)
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE `classses` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `class_code` varchar(255), `class_name` varchar(255), `school_year` varchar(255), `student_list` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateClasss (20240305081618)
+  [1m[35m (55.7ms)[0m  [1m[35mCREATE TABLE `classses` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `class_code` varchar(255), `class_name` varchar(255), `school_year` varchar(255), `student_list` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240305081618')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/students" for 127.0.0.1 at 2024-03-05 15:49:53 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/students"):
+  
+Started GET "/tuition" for 127.0.0.1 at 2024-03-05 15:50:24 +0700
+Processing by TuitionController#index as HTML
+  Rendering tuition/index.html.erb
+  [1m[36mTuition Load (0.1ms)[0m  [1m[34mSELECT `tuitions`.* FROM `tuitions`[0m
+  ↳ app/views/tuition/index.html.erb:3
+  Rendered tuition/index.html.erb (Duration: 19.7ms | Allocations: 125174)
+Completed 200 OK in 29ms (Views: 18.6ms | ActiveRecord: 1.9ms | Allocations: 139787)
+
+
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 15:52:05 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+SyntaxError (/home/duongvuthe/Workspace/demo_rails/app/controllers/duong_controller.rb:6: syntax error, unexpected label, expecting ')'
+Duong.create (name:'Duong', age: 23)
+              ^~~~~
+/home/duongvuthe/Workspace/demo_rails/app/controllers/duong_controller.rb:6: syntax error, unexpected ',', expecting end-of-input
+Duong.create (name:'Duong', age: 23)
+                          ^
+):
+  
+app/controllers/duong_controller.rb:6: syntax error, unexpected label, expecting ')'
+app/controllers/duong_controller.rb:6: syntax error, unexpected ',', expecting end-of-input
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 15:52:24 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.1ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 1.4ms | Allocations: 1175)
+Completed 200 OK in 9ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 15819)
+
+
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 15:54:05 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.1ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 1.7ms | Allocations: 1263)
+Completed 200 OK in 82ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 298117)
+
+
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 15:54:06 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.1ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 1.6ms | Allocations: 650)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 1058)
+
+
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 15:56:03 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.1ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 1.7ms | Allocations: 1267)
+Completed 200 OK in 97ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 298121)
+
+
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 15:56:04 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.5ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 2.5ms | Allocations: 650)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 1058)
+
+
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 15:56:04 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.5ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 2.4ms | Allocations: 570)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 902)
+
+
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 15:56:04 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.2ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 0.7ms | Allocations: 574)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 916)
+
+
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 15:56:04 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.4ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 2.2ms | Allocations: 570)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 15:56:05 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.5ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 2.1ms | Allocations: 570)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 902)
+
+
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 15:56:05 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.4ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 1.9ms | Allocations: 570)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 15:56:05 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.4ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 2.2ms | Allocations: 570)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 15:57:00 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.1ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 1.6ms | Allocations: 1266)
+Completed 200 OK in 123ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 298307)
+
+
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 15:59:23 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.4ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 2.3ms | Allocations: 650)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 1058)
+
+
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 16:03:04 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.1ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 1.5ms | Allocations: 1267)
+Completed 200 OK in 92ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 298119)
+
+
+Started GET "/transcript" for 127.0.0.1 at 2024-03-05 16:03:15 +0700
+Processing by TranscriptController#index as HTML
+  Rendering transcript/index.html.erb
+  [1m[36mTranscript Load (0.4ms)[0m  [1m[34mSELECT `transcripts`.* FROM `transcripts`[0m
+  ↳ app/views/transcript/index.html.erb:3
+  Rendered transcript/index.html.erb (Duration: 28.3ms | Allocations: 124970)
+Completed 200 OK in 33ms (Views: 25.4ms | ActiveRecord: 4.7ms | Allocations: 126497)
+
+
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 16:06:34 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.2ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 1.8ms | Allocations: 1266)
+Completed 200 OK in 78ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 298118)
+
+
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 16:06:36 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.4ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 2.2ms | Allocations: 650)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 1058)
+
+
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 16:06:36 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.4ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 1.9ms | Allocations: 574)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 916)
+
+
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 16:06:36 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.4ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 2.0ms | Allocations: 570)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 16:06:36 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.4ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 2.1ms | Allocations: 570)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 16:06:37 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.3ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 1.9ms | Allocations: 570)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 16:06:37 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.5ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 2.2ms | Allocations: 570)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 902)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDuong Create (0.8ms)[0m  [1m[32mINSERT INTO `duongs` (`name`, `age`, `created_at`, `updated_at`) VALUES ('Name: 1', 23, '2024-03-05 09:09:52.071025', '2024-03-05 09:09:52.071025')[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDuong Create (0.5ms)[0m  [1m[32mINSERT INTO `duongs` (`name`, `age`, `created_at`, `updated_at`) VALUES ('Name: 2', 23, '2024-03-05 09:09:52.075393', '2024-03-05 09:09:52.075393')[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDuong Create (0.6ms)[0m  [1m[32mINSERT INTO `duongs` (`name`, `age`, `created_at`, `updated_at`) VALUES ('Name: 3', 23, '2024-03-05 09:09:52.079104', '2024-03-05 09:09:52.079104')[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDuong Create (0.6ms)[0m  [1m[32mINSERT INTO `duongs` (`name`, `age`, `created_at`, `updated_at`) VALUES ('Name: 4', 23, '2024-03-05 09:09:52.083479', '2024-03-05 09:09:52.083479')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDuong Create (0.6ms)[0m  [1m[32mINSERT INTO `duongs` (`name`, `age`, `created_at`, `updated_at`) VALUES ('Name: 5', 23, '2024-03-05 09:09:52.087241', '2024-03-05 09:09:52.087241')[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDuong Create (0.6ms)[0m  [1m[32mINSERT INTO `duongs` (`name`, `age`, `created_at`, `updated_at`) VALUES ('Name: 6', 23, '2024-03-05 09:09:52.090535', '2024-03-05 09:09:52.090535')[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDuong Create (0.6ms)[0m  [1m[32mINSERT INTO `duongs` (`name`, `age`, `created_at`, `updated_at`) VALUES ('Name: 7', 23, '2024-03-05 09:09:52.094239', '2024-03-05 09:09:52.094239')[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDuong Create (0.6ms)[0m  [1m[32mINSERT INTO `duongs` (`name`, `age`, `created_at`, `updated_at`) VALUES ('Name: 8', 23, '2024-03-05 09:09:52.097597', '2024-03-05 09:09:52.097597')[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDuong Create (0.6ms)[0m  [1m[32mINSERT INTO `duongs` (`name`, `age`, `created_at`, `updated_at`) VALUES ('Name: 9', 23, '2024-03-05 09:09:52.101390', '2024-03-05 09:09:52.101390')[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDuong Create (0.6ms)[0m  [1m[32mINSERT INTO `duongs` (`name`, `age`, `created_at`, `updated_at`) VALUES ('Name: 10', 23, '2024-03-05 09:09:52.104729', '2024-03-05 09:09:52.104729')[0m
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDuong Create (0.6ms)[0m  [1m[32mINSERT INTO `duongs` (`name`, `age`, `created_at`, `updated_at`) VALUES ('Name: 11', 23, '2024-03-05 09:09:52.109133', '2024-03-05 09:09:52.109133')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDuong Create (0.6ms)[0m  [1m[32mINSERT INTO `duongs` (`name`, `age`, `created_at`, `updated_at`) VALUES ('Name: 12', 23, '2024-03-05 09:09:52.112754', '2024-03-05 09:09:52.112754')[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDuong Create (0.6ms)[0m  [1m[32mINSERT INTO `duongs` (`name`, `age`, `created_at`, `updated_at`) VALUES ('Name: 13', 23, '2024-03-05 09:09:52.116735', '2024-03-05 09:09:52.116735')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDuong Create (0.6ms)[0m  [1m[32mINSERT INTO `duongs` (`name`, `age`, `created_at`, `updated_at`) VALUES ('Name: 14', 23, '2024-03-05 09:09:52.120500', '2024-03-05 09:09:52.120500')[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDuong Create (0.7ms)[0m  [1m[32mINSERT INTO `duongs` (`name`, `age`, `created_at`, `updated_at`) VALUES ('Name: 15', 23, '2024-03-05 09:09:52.124544', '2024-03-05 09:09:52.124544')[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDuong Create (0.7ms)[0m  [1m[32mINSERT INTO `duongs` (`name`, `age`, `created_at`, `updated_at`) VALUES ('Name: 16', 23, '2024-03-05 09:09:52.128305', '2024-03-05 09:09:52.128305')[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDuong Create (0.7ms)[0m  [1m[32mINSERT INTO `duongs` (`name`, `age`, `created_at`, `updated_at`) VALUES ('Name: 17', 23, '2024-03-05 09:09:52.132562', '2024-03-05 09:09:52.132562')[0m
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDuong Create (0.8ms)[0m  [1m[32mINSERT INTO `duongs` (`name`, `age`, `created_at`, `updated_at`) VALUES ('Name: 18', 23, '2024-03-05 09:09:52.137258', '2024-03-05 09:09:52.137258')[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDuong Create (0.8ms)[0m  [1m[32mINSERT INTO `duongs` (`name`, `age`, `created_at`, `updated_at`) VALUES ('Name: 19', 23, '2024-03-05 09:09:52.141169', '2024-03-05 09:09:52.141169')[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDuong Create (0.7ms)[0m  [1m[32mINSERT INTO `duongs` (`name`, `age`, `created_at`, `updated_at`) VALUES ('Name: 20', 23, '2024-03-05 09:09:52.145563', '2024-03-05 09:09:52.145563')[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 16:10:01 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.1ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 12.9ms | Allocations: 75931)
+Completed 200 OK in 93ms (Views: 13.0ms | ActiveRecord: 1.5ms | Allocations: 372798)
+
+
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 16:11:27 +0700
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.2ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 3.7ms | Allocations: 3824)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 1.5ms | Allocations: 6070)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2035051191165766095', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('2035051191165766095')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClasss Create (0.7ms)[0m  [1m[32mINSERT INTO `classses` (`class_code`, `class_name`, `school_year`, `student_list`, `created_at`, `updated_at`) VALUES ('CODE_1', 'Name: 1', '2023-2024', 70, '2024-03-05 09:15:21.540425', '2024-03-05 09:15:21.540425')[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClasss Create (0.5ms)[0m  [1m[32mINSERT INTO `classses` (`class_code`, `class_name`, `school_year`, `student_list`, `created_at`, `updated_at`) VALUES ('CODE_2', 'Name: 2', '2023-2024', 70, '2024-03-05 09:15:21.544797', '2024-03-05 09:15:21.544797')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClasss Create (0.6ms)[0m  [1m[32mINSERT INTO `classses` (`class_code`, `class_name`, `school_year`, `student_list`, `created_at`, `updated_at`) VALUES ('CODE_3', 'Name: 3', '2023-2024', 70, '2024-03-05 09:15:21.548230', '2024-03-05 09:15:21.548230')[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClasss Create (0.5ms)[0m  [1m[32mINSERT INTO `classses` (`class_code`, `class_name`, `school_year`, `student_list`, `created_at`, `updated_at`) VALUES ('CODE_4', 'Name: 4', '2023-2024', 70, '2024-03-05 09:15:21.551945', '2024-03-05 09:15:21.551945')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClasss Create (0.6ms)[0m  [1m[32mINSERT INTO `classses` (`class_code`, `class_name`, `school_year`, `student_list`, `created_at`, `updated_at`) VALUES ('CODE_5', 'Name: 5', '2023-2024', 70, '2024-03-05 09:15:21.555583', '2024-03-05 09:15:21.555583')[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClasss Create (0.5ms)[0m  [1m[32mINSERT INTO `classses` (`class_code`, `class_name`, `school_year`, `student_list`, `created_at`, `updated_at`) VALUES ('CODE_6', 'Name: 6', '2023-2024', 70, '2024-03-05 09:15:21.558772', '2024-03-05 09:15:21.558772')[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClasss Create (0.5ms)[0m  [1m[32mINSERT INTO `classses` (`class_code`, `class_name`, `school_year`, `student_list`, `created_at`, `updated_at`) VALUES ('CODE_7', 'Name: 7', '2023-2024', 70, '2024-03-05 09:15:21.561879', '2024-03-05 09:15:21.561879')[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClasss Create (0.5ms)[0m  [1m[32mINSERT INTO `classses` (`class_code`, `class_name`, `school_year`, `student_list`, `created_at`, `updated_at`) VALUES ('CODE_8', 'Name: 8', '2023-2024', 70, '2024-03-05 09:15:21.565041', '2024-03-05 09:15:21.565041')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClasss Create (0.5ms)[0m  [1m[32mINSERT INTO `classses` (`class_code`, `class_name`, `school_year`, `student_list`, `created_at`, `updated_at`) VALUES ('CODE_9', 'Name: 9', '2023-2024', 70, '2024-03-05 09:15:21.568523', '2024-03-05 09:15:21.568523')[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClasss Create (0.5ms)[0m  [1m[32mINSERT INTO `classses` (`class_code`, `class_name`, `school_year`, `student_list`, `created_at`, `updated_at`) VALUES ('CODE_10', 'Name: 10', '2023-2024', 70, '2024-03-05 09:15:21.572359', '2024-03-05 09:15:21.572359')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClasss Create (0.5ms)[0m  [1m[32mINSERT INTO `classses` (`class_code`, `class_name`, `school_year`, `student_list`, `created_at`, `updated_at`) VALUES ('CODE_11', 'Name: 11', '2023-2024', 70, '2024-03-05 09:15:21.575864', '2024-03-05 09:15:21.575864')[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClasss Create (0.5ms)[0m  [1m[32mINSERT INTO `classses` (`class_code`, `class_name`, `school_year`, `student_list`, `created_at`, `updated_at`) VALUES ('CODE_12', 'Name: 12', '2023-2024', 70, '2024-03-05 09:15:21.579582', '2024-03-05 09:15:21.579582')[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClasss Create (0.5ms)[0m  [1m[32mINSERT INTO `classses` (`class_code`, `class_name`, `school_year`, `student_list`, `created_at`, `updated_at`) VALUES ('CODE_13', 'Name: 13', '2023-2024', 70, '2024-03-05 09:15:21.582803', '2024-03-05 09:15:21.582803')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClasss Create (0.5ms)[0m  [1m[32mINSERT INTO `classses` (`class_code`, `class_name`, `school_year`, `student_list`, `created_at`, `updated_at`) VALUES ('CODE_14', 'Name: 14', '2023-2024', 70, '2024-03-05 09:15:21.586416', '2024-03-05 09:15:21.586416')[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClasss Create (0.6ms)[0m  [1m[32mINSERT INTO `classses` (`class_code`, `class_name`, `school_year`, `student_list`, `created_at`, `updated_at`) VALUES ('CODE_15', 'Name: 15', '2023-2024', 70, '2024-03-05 09:15:21.589624', '2024-03-05 09:15:21.589624')[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClasss Create (0.5ms)[0m  [1m[32mINSERT INTO `classses` (`class_code`, `class_name`, `school_year`, `student_list`, `created_at`, `updated_at`) VALUES ('CODE_16', 'Name: 16', '2023-2024', 70, '2024-03-05 09:15:21.592780', '2024-03-05 09:15:21.592780')[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClasss Create (0.5ms)[0m  [1m[32mINSERT INTO `classses` (`class_code`, `class_name`, `school_year`, `student_list`, `created_at`, `updated_at`) VALUES ('CODE_17', 'Name: 17', '2023-2024', 70, '2024-03-05 09:15:21.596015', '2024-03-05 09:15:21.596015')[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClasss Create (0.6ms)[0m  [1m[32mINSERT INTO `classses` (`class_code`, `class_name`, `school_year`, `student_list`, `created_at`, `updated_at`) VALUES ('CODE_18', 'Name: 18', '2023-2024', 70, '2024-03-05 09:15:21.600163', '2024-03-05 09:15:21.600163')[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClasss Create (0.5ms)[0m  [1m[32mINSERT INTO `classses` (`class_code`, `class_name`, `school_year`, `student_list`, `created_at`, `updated_at`) VALUES ('CODE_19', 'Name: 19', '2023-2024', 70, '2024-03-05 09:15:21.604013', '2024-03-05 09:15:21.604013')[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClasss Create (0.7ms)[0m  [1m[32mINSERT INTO `classses` (`class_code`, `class_name`, `school_year`, `student_list`, `created_at`, `updated_at`) VALUES ('CODE_20', 'Name: 20', '2023-2024', 70, '2024-03-05 09:15:21.607774', '2024-03-05 09:15:21.607774')[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/duong" for 127.0.0.1 at 2024-03-05 16:21:53 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by DuongController#index as HTML
+  Rendering duong/index.html.erb
+  [1m[36mDuong Load (0.2ms)[0m  [1m[34mSELECT `duongs`.* FROM `duongs`[0m
+  ↳ app/views/duong/index.html.erb:3
+  Rendered duong/index.html.erb (Duration: 12.6ms | Allocations: 75930)
+Completed 200 OK in 128ms (Views: 12.6ms | ActiveRecord: 1.8ms | Allocations: 372912)
+
+
+Started GET "/classs" for 127.0.0.1 at 2024-03-05 16:22:01 +0700
+  
+NameError (uninitialized constant ApplicationController
+Did you mean?  ApplicationRecord):
+  
+app/controllers/classs_controller.rb:1:in `<main>'
+Started GET "/classs" for 127.0.0.1 at 2024-03-05 16:22:14 +0700
+Processing by ClasssController#index as HTML
+  Rendering classs/index.html.erb
+  Rendered classs/index.html.erb (Duration: 0.3ms | Allocations: 1187)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 3448)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Class</h1>
+<u1>
+  <% @classs.each do |classs| %>
+  <li><%= "Class code: #{classs.class_code},
+           Class name: #{classs.class_name},
+           School year: #{classs.school_year},
+           Student_list: #{classs.student_list}" %>
+</u1>
+):
+1:    <h1>Class</h1>
+2:    <u1>
+3:      <% @classs.each do |classs| %>
+4:      <li><%= "Class code: #{classs.class_code},
+5:               Class name: #{classs.class_name},
+6:               School year: #{classs.school_year},
+7:               Student_list: #{classs.student_list}" %>
+8:    </u1>
+  
+app/views/classs/index.html.erb:10: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/classs" for 127.0.0.1 at 2024-03-05 16:22:15 +0700
+Processing by ClasssController#index as HTML
+  Rendering classs/index.html.erb
+  Rendered classs/index.html.erb (Duration: 1.3ms | Allocations: 1106)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1457)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Class</h1>
+<u1>
+  <% @classs.each do |classs| %>
+  <li><%= "Class code: #{classs.class_code},
+           Class name: #{classs.class_name},
+           School year: #{classs.school_year},
+           Student_list: #{classs.student_list}" %>
+</u1>
+):
+1:    <h1>Class</h1>
+2:    <u1>
+3:      <% @classs.each do |classs| %>
+4:      <li><%= "Class code: #{classs.class_code},
+5:               Class name: #{classs.class_name},
+6:               School year: #{classs.school_year},
+7:               Student_list: #{classs.student_list}" %>
+8:    </u1>
+  
+app/views/classs/index.html.erb:10: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/classs" for 127.0.0.1 at 2024-03-05 16:23:18 +0700
+Processing by ClasssController#index as HTML
+  Rendering classs/index.html.erb
+  Rendered classs/index.html.erb (Duration: 0.3ms | Allocations: 1096)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 3340)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Class</h1>
+<u1>
+  <% @classs.each do |classs| %>
+  <li><%= "Class code: #{classs.class_code},
+           Class name: #{classs.class_name},
+           School year: #{classs.school_year},
+           Student_list: #{classs.student_list}" %></li>
+</u1>
+):
+1:    <h1>Class</h1>
+2:    <u1>
+3:      <% @classs.each do |classs| %>
+4:      <li><%= "Class code: #{classs.class_code},
+5:               Class name: #{classs.class_name},
+6:               School year: #{classs.school_year},
+7:               Student_list: #{classs.student_list}" %></li>
+8:    </u1>
+  
+app/views/classs/index.html.erb:10: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/classs" for 127.0.0.1 at 2024-03-05 16:23:19 +0700
+Processing by ClasssController#index as HTML
+  Rendering classs/index.html.erb
+  Rendered classs/index.html.erb (Duration: 0.3ms | Allocations: 1108)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1462)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Class</h1>
+<u1>
+  <% @classs.each do |classs| %>
+  <li><%= "Class code: #{classs.class_code},
+           Class name: #{classs.class_name},
+           School year: #{classs.school_year},
+           Student_list: #{classs.student_list}" %></li>
+</u1>
+):
+1:    <h1>Class</h1>
+2:    <u1>
+3:      <% @classs.each do |classs| %>
+4:      <li><%= "Class code: #{classs.class_code},
+5:               Class name: #{classs.class_name},
+6:               School year: #{classs.school_year},
+7:               Student_list: #{classs.student_list}" %></li>
+8:    </u1>
+  
+app/views/classs/index.html.erb:10: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/classs" for 127.0.0.1 at 2024-03-05 16:23:21 +0700
+Processing by ClasssController#index as HTML
+  Rendering classs/index.html.erb
+  Rendered classs/index.html.erb (Duration: 0.4ms | Allocations: 1106)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1436)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Class</h1>
+<u1>
+  <% @classs.each do |classs| %>
+  <li><%= "Class code: #{classs.class_code},
+           Class name: #{classs.class_name},
+           School year: #{classs.school_year},
+           Student_list: #{classs.student_list}" %></li>
+</u1>
+):
+1:    <h1>Class</h1>
+2:    <u1>
+3:      <% @classs.each do |classs| %>
+4:      <li><%= "Class code: #{classs.class_code},
+5:               Class name: #{classs.class_name},
+6:               School year: #{classs.school_year},
+7:               Student_list: #{classs.student_list}" %></li>
+8:    </u1>
+  
+app/views/classs/index.html.erb:10: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/classs" for 127.0.0.1 at 2024-03-05 16:23:21 +0700
+Processing by ClasssController#index as HTML
+  Rendering classs/index.html.erb
+  Rendered classs/index.html.erb (Duration: 0.3ms | Allocations: 1107)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1447)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Class</h1>
+<u1>
+  <% @classs.each do |classs| %>
+  <li><%= "Class code: #{classs.class_code},
+           Class name: #{classs.class_name},
+           School year: #{classs.school_year},
+           Student_list: #{classs.student_list}" %></li>
+</u1>
+):
+1:    <h1>Class</h1>
+2:    <u1>
+3:      <% @classs.each do |classs| %>
+4:      <li><%= "Class code: #{classs.class_code},
+5:               Class name: #{classs.class_name},
+6:               School year: #{classs.school_year},
+7:               Student_list: #{classs.student_list}" %></li>
+8:    </u1>
+  
+app/views/classs/index.html.erb:10: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/classs" for 127.0.0.1 at 2024-03-05 16:23:21 +0700
+Processing by ClasssController#index as HTML
+  Rendering classs/index.html.erb
+  Rendered classs/index.html.erb (Duration: 0.4ms | Allocations: 1311)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 2455)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Class</h1>
+<u1>
+  <% @classs.each do |classs| %>
+  <li><%= "Class code: #{classs.class_code},
+           Class name: #{classs.class_name},
+           School year: #{classs.school_year},
+           Student_list: #{classs.student_list}" %></li>
+</u1>
+):
+1:    <h1>Class</h1>
+2:    <u1>
+3:      <% @classs.each do |classs| %>
+4:      <li><%= "Class code: #{classs.class_code},
+5:               Class name: #{classs.class_name},
+6:               School year: #{classs.school_year},
+7:               Student_list: #{classs.student_list}" %></li>
+8:    </u1>
+  
+app/views/classs/index.html.erb:10: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/classs" for 127.0.0.1 at 2024-03-05 16:24:00 +0700
+Processing by ClasssController#index as HTML
+  Rendering classs/index.html.erb
+  [1m[36mClasss Load (0.2ms)[0m  [1m[34mSELECT `classses`.* FROM `classses`[0m
+  ↳ app/views/classs/index.html.erb:3
+  Rendered classs/index.html.erb (Duration: 10.3ms | Allocations: 52970)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 1.5ms | Allocations: 55217)
+
+

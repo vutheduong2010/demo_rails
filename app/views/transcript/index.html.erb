@@ -1,0 +1,11 @@
+<h1>Transcript</h1>
+<u1>
+  <% @transcript.each do |transcript| %>
+  <li><%= "Student code: #{transcript.student_code},
+           Student name: #{transcript.student_name},
+           Date of birth: #{transcript.date_of_birth},
+           Gender: #{transcript.gender},
+           Majors code: #{transcript.majors_code},
+           Scores: #{transcript.scores}" %></li>
+  <% end %>
+</u1>

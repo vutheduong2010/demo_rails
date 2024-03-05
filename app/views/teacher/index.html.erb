@@ -1,0 +1,11 @@
+<h1>Teachers</h1>
+<u1>
+  <% @teacher.each do |teacher| %>
+    <li><%= "Teacher code: #{teacher.teacher_code},
+             Teacher name: #{teacher.teacher_name},
+             Date_of_birth: #{teacher.date_of_birth},
+             Gender: #{teacher.gender},
+             Gmail: #{teacher.gmail},
+             Phone: #{teacher.phone}"  %></li>
+  <% end %>
+</u1>

@@ -1,0 +1,12 @@
+<h1>Tuition</h1>
+<u1>
+  <% @tuition.each do |tuition| %>
+  <li><%= "Student code: #{tuition.student_code},\t
+           Student name: #{tuition.student_name},\t
+           Phone: #{tuition.phone},\t
+           Gmail: #{tuition.gmail},\t
+           Amount in number: #{tuition.amount_in_number},\t
+           Amount in text: #{tuition.amount_in_text}" %></li>
+  <% end %>
+
+</u1>
