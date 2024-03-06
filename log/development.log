@@ -12265,3 +12265,137 @@ Processing by StudentController#index as HTML
 Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.4ms | Allocations: 4888)
 
 
+Started GET "/student/5" for 127.0.0.1 at 2024-03-06 17:13:06 +0700
+Processing by StudentController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/student_controller.rb:8:in `show'
+  Rendering student/show.html.erb
+  Rendered student/_form.html.erb (Duration: 0.1ms | Allocations: 92)
+  Rendered student/show.html.erb (Duration: 2.2ms | Allocations: 3093)
+Completed 200 OK in 10ms (Views: 3.1ms | ActiveRecord: 1.7ms | Allocations: 12363)
+
+
+Started GET "/student/5" for 127.0.0.1 at 2024-03-06 17:13:14 +0700
+Processing by StudentController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/student_controller.rb:8:in `show'
+  Rendering student/show.html.erb
+  Rendered student/_form.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered student/show.html.erb (Duration: 5.0ms | Allocations: 2053)
+Completed 200 OK in 12ms (Views: 6.4ms | ActiveRecord: 0.6ms | Allocations: 4778)
+
+
+Started GET "/student/5" for 127.0.0.1 at 2024-03-06 17:13:15 +0700
+Processing by StudentController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/student_controller.rb:8:in `show'
+  Rendering student/show.html.erb
+  Rendered student/_form.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered student/show.html.erb (Duration: 4.8ms | Allocations: 2063)
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.5ms | Allocations: 4705)
+
+
+Started GET "/student/5" for 127.0.0.1 at 2024-03-06 17:15:00 +0700
+Processing by StudentController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/student_controller.rb:8:in `show'
+  Rendering student/show.html.erb
+  Rendered student/_form.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered student/show.html.erb (Duration: 4.6ms | Allocations: 2053)
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 0.6ms | Allocations: 4695)
+
+
+Started GET "/student/5" for 127.0.0.1 at 2024-03-06 17:26:59 +0700
+Processing by StudentController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/student_controller.rb:8:in `show'
+  Rendering student/show.html.erb
+  Rendered student/_form.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered student/show.html.erb (Duration: 5.8ms | Allocations: 2053)
+Completed 200 OK in 12ms (Views: 7.4ms | ActiveRecord: 0.6ms | Allocations: 4832)
+
+
+Started GET "/student/5" for 127.0.0.1 at 2024-03-06 17:27:00 +0700
+Processing by StudentController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/student_controller.rb:8:in `show'
+  Rendering student/show.html.erb
+  Rendered student/_form.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered student/show.html.erb (Duration: 1.3ms | Allocations: 2047)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 4689)
+
+
+Started GET "/student/14" for 127.0.0.1 at 2024-03-06 17:27:11 +0700
+Processing by StudentController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 14 LIMIT 1[0m
+  ↳ app/controllers/student_controller.rb:8:in `show'
+  Rendering student/show.html.erb
+  Rendered student/_form.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered student/show.html.erb (Duration: 4.2ms | Allocations: 2045)
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 0.6ms | Allocations: 4688)
+
+
+Started GET "/student/12" for 127.0.0.1 at 2024-03-06 17:27:14 +0700
+Processing by StudentController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students` WHERE `students`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/student_controller.rb:8:in `show'
+  Rendering student/show.html.erb
+  Rendered student/_form.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered student/show.html.erb (Duration: 4.5ms | Allocations: 2063)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.6ms | Allocations: 4705)
+
+
+Started GET "/student" for 127.0.0.1 at 2024-03-06 17:34:57 +0700
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb
+  Rendered student/_form.html.erb (Duration: 0.1ms | Allocations: 93)
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  ↳ app/views/student/index.html.erb:20
+  Rendered student/index.html.erb (Duration: 4.9ms | Allocations: 8761)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 11921)
+
+
+Started GET "/student" for 127.0.0.1 at 2024-03-06 17:35:38 +0700
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  ↳ app/views/student/index.html.erb:21
+  Rendered student/index.html.erb (Duration: 6.4ms | Allocations: 8333)
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 1.7ms | Allocations: 11488)
+
+
+Started GET "/student" for 127.0.0.1 at 2024-03-06 17:36:13 +0700
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  ↳ app/views/student/index.html.erb:21
+  Rendered student/index.html.erb (Duration: 6.1ms | Allocations: 8350)
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 1.5ms | Allocations: 11505)
+
+
+Started GET "/student" for 127.0.0.1 at 2024-03-06 17:36:34 +0700
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  ↳ app/views/student/index.html.erb:18
+  Rendered student/index.html.erb (Duration: 6.1ms | Allocations: 8331)
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 1.5ms | Allocations: 11487)
+
+
+Started GET "/student" for 127.0.0.1 at 2024-03-06 17:37:08 +0700
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  ↳ app/views/student/index.html.erb:17
+  Rendered student/index.html.erb (Duration: 6.8ms | Allocations: 8347)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 1.7ms | Allocations: 11503)
+
+
