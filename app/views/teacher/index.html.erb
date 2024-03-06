@@ -1,11 +1,8 @@
-<h1>Teachers</h1>
+<h1>Teacher list</h1>
 <u1>
   <% @teacher.each do |teacher| %>
-    <li><%= "Teacher code: #{teacher.teacher_code},
-             Teacher name: #{teacher.teacher_name},
-             Date_of_birth: #{teacher.date_of_birth},
-             Gender: #{teacher.gender},
-             Gmail: #{teacher.gmail},
-             Phone: #{teacher.phone}"  %></li>
+    <li><%= link_to teacher.code, teacher %></li>
   <% end %>
 </u1>
+
+<%= link_to 'create new teachers list', new_teacher_path %>

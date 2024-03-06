@@ -1,11 +1,38 @@
-<h1>Students</h1>
-<u1>
+<h1>Information Students</h1>
+
+<h2>Tim kiem o day</h2>
+
+<table>
+  <tr>
+    <th>Student Code</th>
+    <th>Student Name</th>
+    <th>Date of birth</th>
+    <th>Address</th>
+    <th>Gmail</th>
+    <th>Phone</th>
+    <th>Action</th>
+  </tr>
   <% @student.each do |student| %>
-    <li><%= "Student code: #{student.student_code},
-             Student name: #{student.student_name},
-             Date of birth: #{student.date_of_birth},
-             Address: #{student.address},
-             Gmail: #{student.gmail},
-             Phone; #{student.phone}"  %></li>
+    <tr>
+      <td><%=  student.student_code  %></td>
+      <td><%=  student.student_name %></td>
+      <td><%=  student.date_of_birth  %></td>
+      <td><%=  student.address  %></td>
+      <td><%=  student.gmail  %></td>
+      <td><%=  student.phone  %></td>
+      <td><%= link_to 'Edit', "/student/#{student.id}" %> |
+          <%= link_to 'Delete', "/student/#{student.id}" %></td>
+    </tr>
   <% end %>
-</u1>
+</table>
+
+<style>
+    table{
+        background-color: aliceblue;
+    }
+    table,tr,th,td{
+        padding: 20px;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>

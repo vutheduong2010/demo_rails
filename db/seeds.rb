@@ -33,6 +33,9 @@ require 'faker'
 # Duong.create(name: "Name: #{index}", age: '23')
 #end
 
+#(1..20).each do |index|
+# Classs.create(class_code: "CODE_#{index}", class_name: "Name: #{index}", school_year: '2023-2024', student_list: '70')
+#end
 (1..20).each do |index|
-  Classs.create(class_code: "CODE_#{index}", class_name: "Name: #{index}", school_year: '2023-2024', student_list: '70')
+  User.create(name: "Name: #{index}", email: "email#{index}@gmail.com")
 end
