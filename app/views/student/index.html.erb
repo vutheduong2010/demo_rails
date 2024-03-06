@@ -1,7 +1,8 @@
 <h1>Information Students</h1>
 
-<h2>Tim kiem o day</h2>
-
+<h2>Search here</h2>
+<input type="text" id="fname" name="fname"><br><br>
+<input type="submit">
 <table>
   <tr>
     <th>Student Code</th>
@@ -12,6 +13,7 @@
     <th>Phone</th>
     <th>Action</th>
   </tr>
+
   <% @student.each do |student| %>
     <tr>
       <td><%=  student.student_code  %></td>
@@ -20,10 +22,13 @@
       <td><%=  student.address  %></td>
       <td><%=  student.gmail  %></td>
       <td><%=  student.phone  %></td>
-      <td><%= link_to 'Edit', "/student/#{student.id}" %> |
-          <%= link_to 'Delete', "/student/#{student.id}" %></td>
+      <td><%= link_to 'Edit', "/student/#{student.id}" %>
+      <td><%= button_to 'Xóa', student_path(student.id), method: :delete %></td>
+
+
     </tr>
   <% end %>
+
 </table>
 
 <style>

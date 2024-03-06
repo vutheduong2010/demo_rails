@@ -1,7 +1,7 @@
 class StudentController < ActionController::Base
   before_action  only: [:show, :edit, :update, :destroy]
   def index
-    @student =Student.all
+    @student = Student.all
   end
 
   def show
@@ -30,8 +30,9 @@ class StudentController < ActionController::Base
   end
 
   def destroy
+    @student = Student.find(params[:id])
     @student.destroy
-    redirect_to student_url, notice: 'Student was successfully destroyed'
+    redirect_to student_index_url, notice: 'Student was successfully destroyed'
   end
 
   private
