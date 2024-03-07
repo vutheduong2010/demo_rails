@@ -2,8 +2,15 @@ Rails.application.routes.draw do
   resources :users, only:[:index]
   resources :duong, only: [:index]
   resources :tuition, only:[:index]
+
+
   resources :student
-  root 'student#index'
+  get 'search_student', to: 'student#search', as: :search_student
+  # get 'student/new', to: 'student#new'
+  # root 'student#index'
+
+
+
   resources :teacher, only:[:index]
   resources :transcript, only:[:index]
   resources :classs, only:[:index]

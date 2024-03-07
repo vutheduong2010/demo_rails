@@ -1,9 +1,14 @@
+
 <h1>Information Students</h1>
 
-<h3>Search here</h3>
-<input type="text" id="fname" name="fname"><br><br>
-<input type="submit">
-<table>
+<!-- tim kiem sinh vien -->
+<%= form_tag(search_student_path, method: :get) do %>
+  <%= text_field_tag :query, params[:query], placeholder: 'Nhập tên sinh viên' %>
+  <%= submit_tag 'Tìm Kiếm' %>
+<% end %>
+<script src="student.js"></script>
+
+<table id="studentTable">
   <tr>
     <th>Student Code</th>
     <th>Student Name</th>
@@ -22,19 +27,15 @@
       <td><%=  student.address  %></td>
       <td><%=  student.gmail  %></td>
       <td><%=  student.phone  %></td>
-      <td><%= link_to 'Edit', "/student/#{student.id}" %>
+      <td><%= link_to 'Edit', "/student/#{student.id}" %></td>
       <td><%= button_to 'Xóa', student_path(student.id), method: :delete %></td>
-
-
     </tr>
   <% end %>
-
-  <h4>Tao moi sinh vien</h4>
-  <input type="text" id="fname" name="fname"><br><br>
-  <input type="submit">
-
-
 </table>
+
+
+<!-- tao bang sinh vien -->
+<%= link_to 'Thêm Sinh Viên', new_student_path %>
 
 <style>
     table{

@@ -1,7 +1,49 @@
+<h1>Edit information students</h1>
+<h2>Thong tin sinh vien</h2>
 
-<%= render 'form' %>
-<%= link_to 'Xem chi tiet', @student %> |
-<%= link_to 'Student list', student_path %>
+<p><strong>Ma sinh vien:</strong> <%= @student.student_code %></p>
+<p><strong>Tên Sinh Viên:</strong> <%= @student.student_name %></p>
+<p><strong>Ngay sinh:</strong> <%= @student.date_of_birth %></p>
+<p><strong>Dia chi:</strong> <%= @student.address %></p>
+<p><strong>Gmail:</strong> <%= @student.gmail %></p>
+<p><strong>Phone:</strong> <%= @student.phone %></p>
+
+  <%= form_with(model: @student, local: true) do |form| %>
+    <div class="field">
+      <%= form.label :student_code %>
+      <%= form.text_field :student_code %>
+    </div>
+
+    <div class="field">
+      <%= form.label :student_name %>
+      <%= form.text_field :student_name %>
+    </div>
+
+    <div class="field">
+      <%= form.label :date_of_birth %>
+      <%= form.text_field :date_of_birth %>
+    </div>
+
+    <div class="field">
+      <%= form.label :address %>
+      <%= form.text_field :address %>
+    </div>
+
+    <div class="field">
+      <%= form.label :gmail %>
+      <%= form.text_field :gmail %>
+    </div>
+
+    <div class="field">
+      <%= form.label :phone %>
+      <%= form.text_field :phone %>
+    </div>
+
+    <%= form.submit 'Lưu Chỉnh Sửa' %>
+
+
+  <% end %>
+
 
 
 
