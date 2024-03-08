@@ -32515,3 +32515,65 @@ Processing by StudentController#index as HTML
 Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 1.1ms | Allocations: 5228)
 
 
+Started GET "/student" for ::1 at 2024-03-08 17:30:30 +0700
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  ↳ app/views/student/index.html.erb:23
+  [1m[36mStudent Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `students`[0m
+  ↳ app/views/student/index.html.erb:38
+  Rendered student/index.html.erb (Duration: 9.3ms | Allocations: 12124)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.5ms | Allocations: 14887)
+
+
+Started GET "/student" for ::1 at 2024-03-08 17:31:05 +0700
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  ↳ app/views/student/index.html.erb:23
+  [1m[36mStudent Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `students`[0m
+  ↳ app/views/student/index.html.erb:38
+  Rendered student/index.html.erb (Duration: 10.7ms | Allocations: 12444)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 1.9ms | Allocations: 15207)
+
+
+Started GET "/student" for ::1 at 2024-03-08 17:31:33 +0700
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  ↳ app/views/student/index.html.erb:23
+  [1m[36mStudent Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `students`[0m
+  ↳ app/views/student/index.html.erb:38
+  Rendered student/index.html.erb (Duration: 11.3ms | Allocations: 12451)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 1.9ms | Allocations: 15215)
+
+
+Started GET "/student/new" for ::1 at 2024-03-08 17:31:37 +0700
+Processing by StudentController#new as HTML
+  Rendering student/new.html.erb
+  Rendered student/new.html.erb (Duration: 1.8ms | Allocations: 1959)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 2394)
+
+
+Started GET "/student" for ::1 at 2024-03-08 17:31:53 +0700
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  ↳ app/views/student/index.html.erb:23
+  [1m[36mStudent Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `students`[0m
+  ↳ app/views/student/index.html.erb:41
+  Rendered student/index.html.erb (Duration: 10.4ms | Allocations: 12446)
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 1.7ms | Allocations: 15210)
+
+
+Started GET "/student" for ::1 at 2024-03-08 17:32:08 +0700
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  ↳ app/views/student/index.html.erb:23
+  [1m[36mStudent Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `students`[0m
+  ↳ app/views/student/index.html.erb:41
+  Rendered student/index.html.erb (Duration: 10.2ms | Allocations: 12464)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 1.9ms | Allocations: 15227)
+
+

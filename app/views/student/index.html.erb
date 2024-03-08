@@ -9,7 +9,7 @@
   <%= submit_tag 'Tìm Kiếm' %>
 <% end %>
 
-<table id="student-table">
+<table class="student-table">
   <tr>
     <th>Student Code</th>
     <th>Student Name</th>
@@ -34,11 +34,12 @@
     </tr>
   <% end %>
 </table>
-</div>
-<%= paginate @student_page %>
+
+
 <!-- tao bang sinh vien -->
 <%= link_to 'Thêm Sinh Viên', new_student_path %>
-
+<%= paginate @student_page %>
+</div>
 <style>
     table{
         background-color: aliceblue;
@@ -51,6 +52,8 @@
     .centered-content {
         text-align: center;
     }
-    
+    .student-table {
+        margin: 0 auto;
+    }
 
 </style>
