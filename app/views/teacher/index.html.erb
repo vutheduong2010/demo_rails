@@ -1,8 +1,48 @@
-<h1>Teacher list</h1>
-<u1>
-  <% @teacher.each do |teacher| %>
-    <li><%= link_to teacher.code, teacher %></li>
-  <% end %>
-</u1>
+<h1>Thông tin giao vien</h1>
 
-<%= link_to 'create new teachers list', new_teacher_path %>
+<!-- tim kiem giao vien -->
+<%= form_tag(teacher_index_path, method: :get) do %>
+  <%= text_field_tag :query, params[:query], placeholder: 'Nhập tên giao vien' %>
+  <%= submit_tag 'Tìm Kiếm' %>
+<% end %>
+
+<table id="teacherTable">
+  <tr>
+    <th>Teacher Code</th>
+    <th>Teacher Name</th>
+    <th>Date of birth</th>
+    <th>Gender</th>
+    <th>Gmail</th>
+    <th>Phone</th>
+    <th>Action</th>
+  </tr>
+
+  <% @teacher.each do |teacher| %>
+    <tr class="<%= @ids&.include?(teacher.id) ? 'active' : '' %>">
+      <td><%=  teacher.teacher_code  %></td>
+      <td><%=  teacher.teacher_name %></td>
+      <td><%=  teacher.date_of_birth  %></td>
+      <td><%=  teacher.gender  %></td>
+      <td><%=  teacher.gmail  %></td>
+      <td><%=  teacher.phone  %></td>
+      <td><%= link_to 'Edit', "/teacher/#{teacher.id}" %></td>
+      <td><%= button_to 'Xóa', teacher_path(teacher.id), method: :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= paginate @teacher_page %>
+<!-- tao bang giao vien -->
+<%= link_to 'Thêm Giao Viên', new_teacher_path %>
+
+<style>
+    table{
+        background-color: aliceblue;
+    }
+    table,tr,th,td{
+        padding: 20px;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+</style>

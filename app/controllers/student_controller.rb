@@ -1,37 +1,37 @@
 class StudentController < ActionController::Base
-  before_action  only: [:show, :edit, :update, :destroy]
   def index
+    @student = Student.all
+    @student_page = Student.page(params[:page]).per(10)
     if params[:query].present?
       @student = Student.where("student_code LIKE ?", "%#{params[:query]}%")
-    else
-      @student = Student.all
-      end
-  end
 
-  def search
-
-    @student =Student.where("student_code LIKE ?", "%#{params[:query]}%")
-
-    respond_to do |format|
-      format.html {render 'search'}
     end
+
+    # if params[:query].present?
+    #   @ids = Student.where("student_code LIKE ?", "%#{params[:query]}%").ids
+    # end
   end
 
 
+  def back_to_show
+    @student = Student.find(params[:id])
+    redirect_to student_path(@student)
+  end
   def show
     @student = Student.find(params[:id])
   end
 
   def new
     @student = Student.new
+  end
 
-    # render :new
+  def back_to_index
+    redirect_to student_index_path
   end
 
 
   def create
     @student = Student.new(student_params)
-
     if @student.save
       redirect_to student_index_path, notice: 'Student was successfully created'
     else

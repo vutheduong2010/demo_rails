@@ -1,0 +1,45 @@
+<h1>Chỉnh sửa thông tin giao vien </h1>
+<h2>Thông tin giao vien </h2>
+
+<p><strong>Mã giao vien:</strong> <%= @teacher.teacher_code %></p>
+<p><strong>Tên Giao Viên:</strong> <%= @teacher.teacher_name %></p>
+<p><strong>Ngày Sinh:</strong> <%= @teacher.date_of_birth %></p>
+<p><strong>Gioi Tinh:</strong> <%= @teacher.gender %></p>
+<p><strong>Gmail:</strong> <%= @teacher.gmail %></p>
+<p><strong>Số Điện Thoại:</strong> <%= @teacher.phone %></p>
+
+<%= form_with(model: @teacher, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :teacher_code %>
+    <%= form.text_field :teacher_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :teacher_name %>
+    <%= form.text_field :teacher_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_of_birth %>
+    <%= form.text_field :date_of_birth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gmail %>
+    <%= form.text_field :gmail %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <%= form.submit 'Lưu Chỉnh Sửa' %>
+
+  <%= link_to 'Quay Lại', back_to_show_teacher_path(@teacher) %>
+<% end %>

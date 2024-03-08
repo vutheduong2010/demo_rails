@@ -6,5 +6,6 @@
 <p><strong>Gmail</strong> <%= @teacher.gmail %></p>
 <p><strong>Phone</strong> <%= @teacher.phone %></p>
 <%=link_to 'Edit', edit_teacher_path(@teacher) %> |
-<%=link_to 'Delete', @teacher, method: :delete, data: {confirm: 'Are you sure you want to delete?'} %> |
-<%=link_to 'Teacher' %>
+
+<%= link_to 'Quay Lại', back_to_index_teacher_index_path %> |
+<%= link_to 'Chỉnh Sửa', edit_teacher_path(@teacher) %>

@@ -4,14 +4,29 @@ Rails.application.routes.draw do
   resources :tuition, only:[:index]
 
 
-  resources :student
-  get 'search_student', to: 'student#search', as: :search_student
+  resources :student do
+        collection do
+          get 'back_to_index'
+        end
+        member do
+          get 'back_to_show'
+        end
+    end
+
+
   # get 'student/new', to: 'student#new'
   # root 'student#index'
 
 
 
-  resources :teacher, only:[:index]
+  resources :teacher do
+    collection do
+      get 'back_to_index'
+    end
+    member do
+      get 'back_to_show'
+    end
+  end
   resources :transcript, only:[:index]
   resources :classs, only:[:index]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

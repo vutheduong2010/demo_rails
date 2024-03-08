@@ -1,22 +1,16 @@
-<h1>Edit information students</h1>
-<h2>Thong tin sinh vien</h2>
+<h1>Chỉnh sửa thông tin sinh viên</h1>
+<h2>Thông tin sinh viên</h2>
 
-<p><strong>Ma sinh vien:</strong> <%= @student.student_code %></p>
+<p><strong>Mã Sinh Viên:</strong> <%= @student.student_code %></p>
 <p><strong>Tên Sinh Viên:</strong> <%= @student.student_name %></p>
-<p><strong>Ngay sinh:</strong> <%= @student.date_of_birth %></p>
-<p><strong>Dia chi:</strong> <%= @student.address %></p>
+<p><strong>Ngày Sinh:</strong> <%= @student.date_of_birth %></p>
+<p><strong>Địa Chỉ:</strong> <%= @student.address %></p>
 <p><strong>Gmail:</strong> <%= @student.gmail %></p>
-<p><strong>Phone:</strong> <%= @student.phone %></p>
+<p><strong>Số Điện Thoại:</strong> <%= @student.phone %></p>
 
 
 
-<button onclick="goBack()">Quay Lại</button>
-
-<script>
-    function goBack() {
-        window.history.back();
-    }
-</script>
+<%= link_to 'Quay Lại', back_to_index_student_index_path %> |
 <%= link_to 'Chỉnh Sửa', edit_student_path(@student) %>
 
 
